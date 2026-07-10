@@ -2,17 +2,17 @@
 name: super-claude-unified-workspace
 description: >
   AEOS Super OS — AI Engineering Operating System. 24-Engine Adaptive Software Engineering
-  Runtime (SCUW v5.0) fully integrated with AEOS Domain Knowledge (Foundation,
+  Runtime (SCUW v5.1) fully integrated with AEOS Domain Knowledge (Foundation,
   Engineering, Architecture, Backend, Database, Frontend), backed by an expanded reference
   library in /foundation, /engineering, /architecture, /backend, /database for
   progressive disclosure. Use for any non-trivial coding task — new features, bug
   fixes, refactors, architecture/API/database decisions — where disciplined,
   evidence-driven engineering matters.
-version: 5.0.0
+version: 5.1.0
 domains: [foundation, engineering, architecture, backend, database, frontend]
 ---
 
-# SCUW v5.0 — AI Engineering Runtime (Edisi Metakognisi & Graph-Based Adaptive Execution)
+# SCUW v5.1 — AI Engineering Runtime (Edisi Metakognisi & Graph-Based Adaptive Execution)
 
 Two systems, one file:
 - **Part 1 (SCUW)**: *how* you execute — 24 cognitive engines across 4 adaptive phases. Safety-first, honest, minimal.
@@ -68,9 +68,9 @@ If unsure: state which two tiers you're between and why, then proceed with the s
 
 ---
 
-## SCUW v5.0 AUTONOMOUS RUNTIME & SCHEDULER
+## SCUW v5.1 AUTONOMOUS RUNTIME & SCHEDULER
 
-Instead of a static, linear phase progression, SCUW v5.0 operates as an autonomous runtime governed by the **Cognitive Scheduler**. The Scheduler manages the execution lifecycle of the 24 cognitive engines through an adaptive loop:
+Instead of a static, linear phase progression, SCUW v5.1 operates as an autonomous runtime governed by the **Cognitive Scheduler**. The Scheduler manages the execution lifecycle of the 24 cognitive engines through an adaptive loop:
 
 ```
     [User Request]
@@ -426,6 +426,63 @@ Before editing files, run a simulation pass to calculate and print risk percenta
 - **Deadlock Probability**: (e.g., `Deadlock: 12%` due to uncommitted nested transactions).
 - **Performance Bottleneck**: (e.g., `Bottleneck: 65%` due to O(N) operations in request loops).
 - **Race Condition Risk**: (e.g., `Race Condition: 40%` due to non-atomic updates on shared memory).
+
+---
+
+
+---
+
+## §6.7 SCUW RUNTIME CORE & PLUGIN SDK SPECIFICATION (v5.1)
+
+To transition SCUW from a passive knowledge protocol into a fully decentralized **AI Orchestration Framework**, you must adhere to the following core runtime architecture:
+
+### 1. Shared Blackboard Architecture
+All active engines communicate via a central **Shared Blackboard** rather than calling each other sequentially:
+- Any engine can read from or write to the Blackboard during its execution slice.
+- **Blackboard Schema**:
+  ```json
+  {
+    "active_goals": [],
+    "inferred_facts": {},
+    "assumptions_registry": {},
+    "decisions_log": [],
+    "unresolved_conflicts": []
+  }
+  ```
+
+### 2. Decentralized Event Bus
+Communication between engines is event-driven. Engines emit and subscribe to events on the central **Event Bus**:
+- `ArchitectureSelected` ──► Triggers the DB Engine to evaluate schemas and the Frontend Engine to evaluate UI patterns.
+- `SecurityViolationFound` ──► Instantly triggers the Critic Engine and interrupts the execution pipeline to enforce rollbacks.
+
+### 3. Engine Registry & Contract
+Every cognitive engine must be registered in the **Engine Registry** and comply with a strict input-output contract:
+- **Contract Signature**:
+  ```yaml
+  engine:
+    id: "E10_Security"
+    capability: "Security_Audit"
+    priority: 1
+    dependencies: ["Code_Diff"]
+    input_contract: "Raw_Diff"
+    output_contract: "Vulnerability_Report"
+    invariants: ["No_Secrets_Committed"]
+  ```
+
+### 4. Capability Registry & Semantic Routing
+Routing is purely semantic. The **Intent Analyzer** converts the request into embeddings and maps them to nearest capabilities in the **Capability Registry**:
+- Avoid hardcoded keyword-to-file mappings.
+- Resolve requirements to their closest capability nodes (e.g., mapping "API reset password" to `Auth_Flow_JWT` and `REST_Endpoint` capabilities).
+
+### 5. Self-Learning Layer
+After executing every task, run an autonomous post-mortem loop to extract and store patterns:
+```
+  [Execution Finish] ──► [Evaluate Performance] ──► [Pattern Extraction] ──► [Knowledge base update]
+```
+- Save extracted patterns back to the local repository conventions or `.scuw/patterns/` directory.
+
+### 6. Plugin SDK
+Extend the runtime core with third-party domain packs (e.g., *Rust Pack*, *Mobile Pack*, *Security Pack*) by loading their respective registries and schemas dynamically into the active environment.
 
 ---
 
