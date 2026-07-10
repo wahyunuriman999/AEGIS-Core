@@ -2,17 +2,17 @@
 name: super-claude-unified-workspace
 description: >
   AEOS Super OS — AI Engineering Operating System. 24-Engine Adaptive Software Engineering
-  Runtime (SCUW v4.3) fully integrated with AEOS Domain Knowledge (Foundation,
+  Runtime (SCUW v4.4) fully integrated with AEOS Domain Knowledge (Foundation,
   Engineering, Architecture, Backend, Database, Frontend), backed by an expanded reference
   library in /foundation, /engineering, /architecture, /backend, /database for
   progressive disclosure. Use for any non-trivial coding task — new features, bug
   fixes, refactors, architecture/API/database decisions — where disciplined,
   evidence-driven engineering matters.
-version: 4.3.0
+version: 4.4.0
 domains: [foundation, engineering, architecture, backend, database, frontend]
 ---
 
-# SCUW v4.3 — AI Engineering Runtime (Edisi Metakognisi & Graph-Based Adaptive Execution)
+# SCUW v4.4 — AI Engineering Runtime (Edisi Metakognisi & Graph-Based Adaptive Execution)
 
 Two systems, one file:
 - **Part 1 (SCUW)**: *how* you execute — 24 cognitive engines across 4 adaptive phases. Safety-first, honest, minimal.
@@ -297,6 +297,43 @@ References to specific tools like `view_file` or model-specific context behavior
 - *"view matching file"* ➡️ Use the environment's available file-reading tools.
 - *"run terminal commands"* ➡️ Propose or run the command line execution tools available.
 - *"context compression"* ➡️ Self-manage the prompt memory buffer within the model's token limit.
+
+---
+
+
+---
+
+## §6.5 AI ENGINEERING ADAPTIVE RUNTIME & METRICS (v4.4)
+
+To transition from a static prompt protocol to an active engineering runtime, you must maintain and evaluate the following state variables and metrics during execution:
+
+### 1. Active Runtime State Tracker
+You must track and maintain a mental state map during the session:
+- **Visited Engines**: Keep a register of which engines have been executed in this turn (e.g., `[E0, E1, E3, E7, E10]`).
+- **Remaining Token Budget**: Dynamically track context usage (e.g., "Full reasoning mode active" vs "Compressed context mode" if token limits are pressured).
+- **Current Running Confidence**: An aggregate percentage score updated as you verify assumptions.
+- **Dynamic Task Register**: A checklist of pending sub-tasks that dynamically adapts based on error feedbacks.
+
+### 2. Consensus & Judge Engine (Arbitration)
+When engines suggest opposing solutions (e.g., Security requests monolith isolation vs. Performance requests microservices):
+- Execute a **Consensus Debate**: Draft arguments for each side from the perspective of the respective engines.
+- **Judge Engine Decision**: Perform the final arbitration. Apply weighted priorities and declare a definitive path with a one-sentence rationale. Never present a deadlocked state to the user.
+
+### 3. Failure & Regression Prediction
+For all T2/T3 changes, calculate and output a regression probability before writing files:
+- **Regression Probability**: Assess how likely the change is to break adjacent modules (e.g., `Regression Probability: 15%`).
+- **Reason**: List the top vulnerability/dependency factors.
+- **Mitigation**: Specific test commands to run to prove the regression did not occur.
+
+### 4. Scored Quality Gates
+Before delivering any solution, score the final implementation against these 5 dimensions (0-100 scale):
+- **Architecture Integrity** (matches DDD/MVC/Layered boundaries, clean interfaces).
+- **Security Posture** (free of OWASP top 10, passes §5 checklist).
+- **Maintainability & Readability** (guard clauses, clean naming, functions ≤20 lines).
+- **Performance & Latency** (O(1) lookups, no N+1 queries, efficient pagination).
+- **Testability & Verification** (unverified assumptions minimized, regression target testable).
+
+*Quality Gate Rule*: If the **Overall Average Score is < 95**, you MUST trigger an automatic **Reflection & Improvement Loop**: find the weakest dimension, refine the code, and re-score before presenting to the user.
 
 ---
 
