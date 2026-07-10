@@ -19,6 +19,7 @@ By combining the **SCUW Execution Protocol** (how to think & act safely) with **
 
 ## 🗺️ Table of Contents
 - [🎯 Core Highlights](#-core-highlights)
+- [🤖 Multi-Agent Collaborations Integrated](#-multi-agent-collaborations-integrated)
 - [📦 Installation & Setup](#-installation--setup)
 - [🔌 Supported Platforms & Tools](#-supported-platforms--tools)
 - [🧭 Dynamic Routing & Dependency Graph](#-dynamic-routing--dependency-graph)
@@ -34,6 +35,16 @@ By combining the **SCUW Execution Protocol** (how to think & act safely) with **
 *   **4-Phase Pipeline**: Diagnose ➡️ Plan ➡️ Execute ➡️ Report. Every stage is mathematically evaluated through 20 sub-engines.
 *   **Workspace Safety & Sandbox Isolation**: Mandated sandbox duplicating (§5.5) to keep original codebases untouched.
 *   **Dynamic Engine Activation**: Skips unnecessary engines for simple tasks (T0/T1) to optimize latency and context cost.
+
+---
+
+## 🤖 Multi-Agent Collaborations Integrated
+
+Version 4.2 has been upgraded with the industry's best agentic practices:
+*   **SWE-Agent ACI Feedback Loop**: Introduces the *Observe & Reflect* cycle. If a compilation or test command fails, the agent must inspect the error log and update its strategy before modifying files again.
+*   **Aider Local Conventions**: The agent dynamically reads local `.cursorrules`, `.coderules`, or `CONVENTIONS.md` files at the start of the session to adapt to repository-specific rules.
+*   **Aider Atomic Commits**: Enforces step-by-step git commits for each sub-feature to ensure easy rollbacks.
+*   **DaisyUI Semantic Styling**: Establishes UI component standards (using DaisyUI class tags) to keep HTML templates clean, lightweight, and extremely token-efficient.
 
 ---
 
@@ -97,6 +108,7 @@ AEOS progressive disclosure modules provide deep-dive re-usable playbooks:
 *   [🏛️ Architecture Standards](docs/architecture.md) — Clean Arch, Dependency Injection, DDD.
 *   [🔌 Backend Engineering](docs/backend.md) — REST, JWT Auth, Caching, Rate Limiting.
 *   [💾 Database Design & SQL](docs/database.md) — Schema Migrations, Indexing, Transactions.
+*   [🎨 Frontend & UI (DaisyUI)](docs/frontend.md) — Semantic Components, Theme Tokens, Clean DOM.
 
 ---
 

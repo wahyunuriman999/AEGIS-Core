@@ -1,0 +1,1 @@
+# 🎨 AEOS Frontend & UI Guidelines (DaisyUI Edition)\n\nRules for semantic component classes, theme token colors, and keeping the DOM lightweight to prevent LLM context bloating.
