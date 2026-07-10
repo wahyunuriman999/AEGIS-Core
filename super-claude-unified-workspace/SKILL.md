@@ -3,20 +3,20 @@ name: super-claude-unified-workspace
 description: >
   AEOS Super OS — AI Engineering Operating System. 20-Engine Software Engineering
   Protocol (SCUW v4.2) fully integrated with AEOS Domain Knowledge (Foundation,
-  Engineering, Architecture, Backend, Database), backed by an expanded reference
+  Engineering, Architecture, Backend, Database, Frontend), backed by an expanded reference
   library in /foundation, /engineering, /architecture, /backend, /database for
   progressive disclosure. Use for any non-trivial coding task — new features, bug
   fixes, refactors, architecture/API/database decisions — where disciplined,
   evidence-driven engineering matters.
 version: 4.2.0
-domains: [foundation, engineering, architecture, backend, database]
+domains: [foundation, engineering, architecture, backend, database, frontend]
 ---
 
-# SCUW v4.2 — AI Engineering Operating System (Edisi Kolaborasi AIEOS, AIOS, Aider & SWE-Agent)
+# SCUW v4.2 — AI Engineering Operating System (Edisi Kolaborasi AIEOS, AIOS, Aider, SWE-Agent & DaisyUI)
 
 Two systems, one file:
 - **Part 1 (SCUW)**: *how* you execute — 20 engines across 4 ordered phases. Safety-first, honest, minimal.
-- **Part 2 (AEOS)**: *what* you know — concrete domain standards for Foundation, Engineering, Architecture, Backend, Database.
+- **Part 2 (AEOS)**: *what* you know — concrete domain standards for Foundation, Engineering, Architecture, Backend, Database, Frontend.
 
 Every rule prevents a real failure mode. If a rule doesn't change behavior, it doesn't belong here.
 
@@ -712,6 +712,29 @@ Default to **PostgreSQL** for any new relational workload unless there is a spec
 
 ---
 
+## §F. FRONTEND & UI (Edisi DaisyUI)
+
+### Semantic Styling Over Utility Bloat
+- Avoid writing long, repetitive classes for basic controls (e.g. `px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition`).
+- **DaisyUI Standard**: Always prefer clean, semantic daisyUI component classes:
+  - Button: `btn btn-primary`
+  - Alert: `alert alert-error`
+  - Card: `card bg-base-100 shadow-xl`
+  - Modal: `modal` + `modal-box`
+- Extending styles: Use Tailwind utilities only for fine-grained layouts or spacings (`btn btn-primary w-full mt-4`).
+
+### Theme Token Rule
+- Never use hardcoded HEX/RGB color codes for backgrounds, borders, or text (e.g., `bg-[#3b82f6]`).
+- Use daisyUI's theme-aware classes to ensure seamless light/dark mode support:
+  - Backgrounds: `bg-base-100` (main surface), `bg-base-200` (app container background), `bg-base-300` (nested containers).
+  - Text colors: `text-primary`, `text-secondary`, `text-base-content`.
+  - State colors: `btn-info`, `btn-success`, `btn-warning`, `btn-error`.
+
+### Clean DOM Markups
+- Keep HTML structures readable and lightweight. By utilizing daisyUI semantic components, the nesting level of wrapper divs is significantly reduced, helping models navigate and edit DOM structures without token truncation.
+
+---
+
 # QUICK REFERENCE — DOMAIN TRIGGER MAP
 
 | Task involves... | Phase / Engine / Section |
@@ -750,4 +773,5 @@ Default to **PostgreSQL** for any new relational workload unless there is a spec
 | DB schema / migrations | §E Migrations + Transactions |
 | Query optimization | §E Indexing + SQL Fundamentals |
 | DB technology choice | §E Storage Choice |
+| Frontend UI components | §F Frontend & UI |
 | T3 high-risk change | T3 tier + E2 + E8 + §C Architecture Review + §A Blast Radius |
