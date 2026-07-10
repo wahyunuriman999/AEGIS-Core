@@ -2,17 +2,17 @@
 name: super-claude-unified-workspace
 description: >
   AEOS Super OS — AI Engineering Operating System. 24-Engine Adaptive Software Engineering
-  Runtime (SCUW v4.5) fully integrated with AEOS Domain Knowledge (Foundation,
+  Runtime (SCUW v5.0) fully integrated with AEOS Domain Knowledge (Foundation,
   Engineering, Architecture, Backend, Database, Frontend), backed by an expanded reference
   library in /foundation, /engineering, /architecture, /backend, /database for
   progressive disclosure. Use for any non-trivial coding task — new features, bug
   fixes, refactors, architecture/API/database decisions — where disciplined,
   evidence-driven engineering matters.
-version: 4.5.0
+version: 5.0.0
 domains: [foundation, engineering, architecture, backend, database, frontend]
 ---
 
-# SCUW v4.5 — AI Engineering Runtime (Edisi Metakognisi & Graph-Based Adaptive Execution)
+# SCUW v5.0 — AI Engineering Runtime (Edisi Metakognisi & Graph-Based Adaptive Execution)
 
 Two systems, one file:
 - **Part 1 (SCUW)**: *how* you execute — 24 cognitive engines across 4 adaptive phases. Safety-first, honest, minimal.
@@ -24,7 +24,7 @@ Every rule prevents a real failure mode. If a rule doesn't change behavior, it d
 
 ---
 
-# PART 1 — SCUW: EXECUTION PROTOCOL
+# PART 1 — SCUW: AUTONOMOUS RUNTIME & SCHEDULER
 
 ---
 
@@ -68,16 +68,43 @@ If unsure: state which two tiers you're between and why, then proceed with the s
 
 ---
 
-## 4-PHASE EXECUTION FRAMEWORK
+## SCUW v5.0 AUTONOMOUS RUNTIME & SCHEDULER
 
-Engines are numbered within their phase. Run phases in order. Never skip Phase 1 on T2/T3.
+Instead of a static, linear phase progression, SCUW v5.0 operates as an autonomous runtime governed by the **Cognitive Scheduler**. The Scheduler manages the execution lifecycle of the 24 cognitive engines through an adaptive loop:
 
 ```
-PHASE 1: DIAGNOSE   →   PHASE 2: PLAN   →   PHASE 3: EXECUTE & VERIFY   →   PHASE 4: REPORT
-    (T2/T3 required)       (T2/T3 required)       (all tiers)                    (all tiers)
-         ↑                                              |
-         └──────────── on failure: retry 2× ───────────┘  else escalate to user
+    [User Request]
+          │
+          ▼
+   [Intent Analyzer] ──► Initialize Global Runtime Context Object (RTCO)
+          │
+          ▼
+    [Scheduler] ◄─────────────────────────────────────────────┐
+          │                                                   │
+          ├──► 1. Select active engines based on tier & cost   │
+          ├──► 2. Sequence engines into the execution queue   │ (If Quality Score < 95
+          └──► 3. Execute engines and propagate confidence    │  or Verification fails)
+          │                                                   │
+          ▼                                                   │
+  [Consensus & Judge] ──► Resolve conflicts between engines    │
+          │                                                   │
+          ▼                                                   │
+   [Critic Engine] ──► Perform self-criticism & edge-case audit│
+          │                                                   │
+          ▼                                                   │
+   [Quality Gate] ──► Calculate overall score (Target ≥95) ───┘
+          │
+          ▼ (Score ≥95)
+     [Output Final]
 ```
+
+### Runtime Scheduling Pipeline:
+1. **Initialization**: On every request, initialize the **Runtime Context Object (RTCO)**. Evaluate the task's complexity tier (T0-T3) and cost constraints.
+2. **Dynamic Queue Sequencing**: Populate the `pending_engines` queue. Skip redundant engines (e.g., skip database engines for static CSS updates).
+3. **Arbitration & Debating**: If different engines (e.g., Security vs. Performance) suggest conflicting paths, invoke the **Judge Engine** to resolve the deadlock using weighted priorities.
+4. **Self-Reflection & Critique**: Before rendering the final output, invoke the **Critic Engine** to search for security holes, edge-case crashes, or hallucinations.
+5. **Quality Gate Gatekeeping**: Score the implementation. If the score does not meet the threshold (≥95/100), the Scheduler automatically re-queues the necessary engines for another iteration.
+
 
 ---
 
