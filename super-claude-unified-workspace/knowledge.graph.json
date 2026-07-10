@@ -1,0 +1,54 @@
+{
+  "graph_version": "1.0.0",
+  "nodes": {
+    "REST_API": {
+      "title": "REST API Design",
+      "file": "backend/REST.md",
+      "depends_on": ["Input_Validation", "API_Error_Model"]
+    },
+    "Input_Validation": {
+      "title": "Input Validation",
+      "file": "backend/Validation.md",
+      "depends_on": ["API_Error_Model"]
+    },
+    "API_Error_Model": {
+      "title": "API Error Model",
+      "file": "backend/api/error_model.md"
+    },
+    "Authentication": {
+      "title": "JWT/OAuth2 Authentication",
+      "file": "backend/auth/jwt.md",
+      "depends_on": ["REST_API", "Rate_Limiting"]
+    },
+    "Rate_Limiting": {
+      "title": "Rate Limiting",
+      "file": "backend/RateLimiting.md"
+    },
+    "Database_Migration": {
+      "title": "Schema Migrations",
+      "file": "database/sql/migrations.md",
+      "depends_on": ["Database_Transactions"]
+    },
+    "Database_Transactions": {
+      "title": "Transactions (ACID)",
+      "file": "database/Transactions.md"
+    },
+    "Query_Optimization": {
+      "title": "Query Optimization",
+      "file": "database/sql/query_optimization.md",
+      "depends_on": ["Database_Indexing"]
+    },
+    "Database_Indexing": {
+      "title": "Indexing",
+      "file": "database/Indexing.md"
+    },
+    "Clean_Code": {
+      "title": "Clean Code & Naming",
+      "file": "engineering/CleanCode.md"
+    },
+    "Debugging": {
+      "title": "Debugging Playbook",
+      "file": "engineering/Debugging.md"
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "routing_version": "1.1.0",
+  "aliases": {
+    "login": "auth",
+    "signin": "auth",
+    "bearer": "auth",
+    "token": "auth",
+    "credential": "auth",
+    "pin": "pin_reset",
+    "reset": "pin_reset",
+    "mail": "email",
+    "notification": "email",
+    "migration": "database_change",
+    "schema": "database_change",
+    "index": "query_optimization",
+    "slow_query": "query_optimization",
+    "explain": "query_optimization",
+    "rest_api": "api_design",
+    "endpoint": "api_design",
+    "bug": "debugging",
+    "error": "debugging",
+    "clean_code": "refactoring",
+    "optimization": "performance",
+    "speed": "performance"
+  },
+  "triggers": {
+    "auth": [
+      "backend/auth/jwt.md",
+      "backend/auth/oauth2.md"
+    ],
+    "pin_reset": [
+      "backend/auth/jwt.md",
+      "backend/api/error_model.md"
+    ],
+    "email": [
+      "backend/api/error_model.md",
+      "backend/patterns/circuit_breaker.md"
+    ],
+    "database_change": [
+      "database/sql/migrations.md",
+      "database/playbooks/database_release.md",
+      "database/checklists/database_review.md"
+    ],
+    "query_optimization": [
+      "database/Indexing.md",
+      "database/sql/query_optimization.md"
+    ],
+    "api_design": [
+      "backend/REST.md",
+      "backend/Validation.md",
+      "backend/api/error_model.md"
+    ],
+    "debugging": [
+      "engineering/Debugging.md",
+      "engineering/decision-trees/debug_tree.md"
+    ],
+    "refactoring": [
+      "engineering/Refactoring.md",
+      "engineering/CleanCode.md"
+    ],
+    "performance": [
+      "engineering/Performance.md",
+      "database/Indexing.md"
+    ],
+    "security": [
+      "engineering/checklists/pr_checklist.md"
+    ],
+    "testing": [
+      "engineering/Testing.md",
+      "engineering/checklists/testing_checklist.md"
+    ]
+  }
+}
