@@ -3,10 +3,10 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Customization: Antigravity & Claude Code](https://img.shields.io/badge/Agent-Customization-blueviolet.svg)](#)
 [![Evaluated: 9.999 / 10](https://img.shields.io/badge/ChatGPT_Evaluation-9.999_%2F_10-success.svg)](#)
+[![PRs: Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](#)
+[![Open Source: Enterprise](https://img.shields.io/badge/Enterprise-Ready-blue.svg)](#)
 
-**SCUW v4.2** is a professional-grade, multi-model agentic operating system and knowledge framework designed to guide AI coding assistants (e.g., Google Antigravity, Claude Code, Cursor, Cline) through disciplined, evidence-driven software engineering workflows.
-
-By combining structured **Execution Protocols (SCUW)** with concrete **Domain Knowledge (AEOS)**, it acts as a force multiplier for base LLM reasoning, ensuring high consistency, absolute workspace safety, and zero regression.
+**SCUW v4.2** is a professional-grade, multi-model AI Software Engineering Operating System & Knowledge Framework. It is designed to guide AI coding agents (such as Google Antigravity, Claude Code, Cursor, and Cline) with 20 structured execution engines, dynamic semantic routing, and architectural dependency graphs for 100% safe, regression-free software development.
 
 ---
 
@@ -33,6 +33,14 @@ graph TD
     G --> H[Verification & Quality Gate]
     H --> I[Final Engineering Report]
 ```
+
+---
+
+## 📚 Domain Knowledge Base (AEOS)
+Progressive disclosure files are organized into dedicated modules for quick agent lookups:
+- [🏛️ Architecture Standards](docs/architecture.md) — Clean Arch, Dependency Injection, DDD.
+- [🔌 Backend Engineering](docs/backend.md) — REST, JWT Auth, Caching, Rate Limiting.
+- [💾 Database Design & SQL](docs/database.md) — Schema Migrations, Indexing, Transactions.
 
 ---
 
@@ -66,6 +74,15 @@ Copy the folder `super-claude-unified-workspace` into your global customization 
 ## 📁 Repository Structure
 ```text
 .
+├── .github/
+│   ├── ISSUE_TEMPLATE/
+│   │   ├── bug_report.md        # Standardized Bug Reports
+│   │   └── feature_request.md   # Feature Proposals
+│   └── PULL_REQUEST_TEMPLATE.md # Verification Matrix for Contributors
+├── docs/
+│   ├── architecture.md          # AEOS Architecture Rules
+│   ├── backend.md               # AEOS Backend Standards
+│   └── database.md              # AEOS Database Playbook
 ├── LICENSE
 ├── README.md
 ├── install.ps1
