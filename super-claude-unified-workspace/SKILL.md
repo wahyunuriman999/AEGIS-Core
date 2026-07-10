@@ -1,21 +1,21 @@
 ---
 name: super-claude-unified-workspace
 description: >
-  AEOS Super OS — AI Engineering Operating System. 20-Engine Software Engineering
-  Protocol (SCUW v4.2) fully integrated with AEOS Domain Knowledge (Foundation,
+  AEOS Super OS — AI Engineering Operating System. 24-Engine Adaptive Software Engineering
+  Runtime (SCUW v4.3) fully integrated with AEOS Domain Knowledge (Foundation,
   Engineering, Architecture, Backend, Database, Frontend), backed by an expanded reference
   library in /foundation, /engineering, /architecture, /backend, /database for
   progressive disclosure. Use for any non-trivial coding task — new features, bug
   fixes, refactors, architecture/API/database decisions — where disciplined,
   evidence-driven engineering matters.
-version: 4.2.0
+version: 4.3.0
 domains: [foundation, engineering, architecture, backend, database, frontend]
 ---
 
-# SCUW v4.2 — AI Engineering Operating System (Edisi Kolaborasi AIEOS, AIOS, Aider, SWE-Agent & DaisyUI)
+# SCUW v4.3 — AI Engineering Runtime (Edisi Metakognisi & Graph-Based Adaptive Execution)
 
 Two systems, one file:
-- **Part 1 (SCUW)**: *how* you execute — 20 engines across 4 ordered phases. Safety-first, honest, minimal.
+- **Part 1 (SCUW)**: *how* you execute — 24 cognitive engines across 4 adaptive phases. Safety-first, honest, minimal.
 - **Part 2 (AEOS)**: *what* you know — concrete domain standards for Foundation, Engineering, Architecture, Backend, Database, Frontend.
 
 Every rule prevents a real failure mode. If a rule doesn't change behavior, it doesn't belong here.
@@ -83,6 +83,12 @@ PHASE 1: DIAGNOSE   →   PHASE 2: PLAN   →   PHASE 3: EXECUTE & VERIFY   → 
 
 ### ▶ PHASE 1 — DIAGNOSE (required for T2/T3)
 
+**[E0] Meta Cognitive Routing**
+Dynamically evaluate task context, complexity, risk, and resource boundaries before activating downstream engines:
+- Analyze request intent, complexity tier, and token context safety.
+- Route execution paths adaptively (e.g., skip redundant review loops on low-complexity fixes, double down on security audits for high-risk changes).
+- Establish adaptive constraints (e.g., compressed reasoning mode under tight token limit vs. full reasoning mode for architectural decisions).
+
 **[E1] Repository Intelligence**
 Build a mental model before touching any file:
 - Entry points, build configuration, module topology.
@@ -127,6 +133,18 @@ When engineering constraints conflict, resolve in this exact priority order:
 
 If two options tie on all criteria, present both with a one-line trade-off each and a clear recommendation. Never silently pick one on a close call.
 
+**[E7.5] Consensus & Arbitration Engine**
+Resolve deadlocks or conflicting priorities between different architectural/engineering requirements:
+- Balance trade-offs between competing dimensions (e.g., Security vs. Performance vs. Ease of Coding).
+- Use weighted priorities: Security & Correctness = 30%, Backward Compatibility = 25%, Maintainability = 20%, Performance = 15%, Minimal Diff = 10%.
+- Document the winning consensus and the rationale behind overriding secondary objectives.
+
+**[E7.6] Confidence Scoring Engine**
+Assign dynamic, objective confidence levels to proposed decisions:
+- Rank confidence (e.g., "Architecture: 92% confidence based on successful compilation and standard DDD pattern").
+- Provide clear rationales for confidence scores and state what specific verifications would increase or decrease the confidence (e.g., "Verification in production staging environment would raise confidence to 98%").
+- Never invent percentages without an objective evidence-based explanation.
+
 **[E8] Rollback Planning**
 For T3: Define the rollback procedure before starting execution. This must cover:
 - How to revert code changes (e.g., revert commit, feature flag off).
@@ -160,6 +178,12 @@ For any newly added or updated library/package:
 For Tier T2/T3 changes: Make **atomic commits** for each sub-step during implementation (e.g., committing the main utility method before adding its CLI handlers, or committing database models separately from business logic). This facilitates granular rollbacks and prevents massive, unreviewable pull requests.
 
 **[E13] Verification & ACI Feedback Loop (SWE-Agent Pattern)**
+**[E12.7] Critic & Self-Reflection Loop**
+Critically review the proposed changes before finalizing output:
+- Actively search for logic weaknesses, edge-case failures, unhandled exceptions, security vulnerabilities, or hallucinations.
+- Perform a simulated "Observe & Reflect" cycle on the implementation.
+- Refine the solution iteratively until the code satisfies all invariants and the error confidence is reduced below the threshold.
+
 Before marking execution complete, audit every modified path against:
 `[ ] Syntax valid` `[ ] Compiles/parses` `[ ] Runtime behavior correct` `[ ] Logic covers edge cases (null, empty, overflow, concurrent)` `[ ] Regression targets from E5 unaffected` `[ ] Security (E10) passed` `[ ] Performance (E11) passed`
 
