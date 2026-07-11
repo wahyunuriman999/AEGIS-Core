@@ -3,7 +3,7 @@
   <img src="https://img.shields.io/badge/Status-Active-success?style=for-the-badge" alt="Status" />
   <img src="https://img.shields.io/badge/License-Copyrighted-red?style=for-the-badge" alt="License" />
   
-  <h1>🛡️ AEGIS v5.1: AI Engineering Operating System</h1>
+  <h1>🛡️ AEGIS: AI Engineering Operating System</h1>
   <p><strong>The ultimate cognitive runtime for multi-agent software engineering, ensuring 100% precision, safety, and evidence-driven coding.</strong></p>
 </div>
 
