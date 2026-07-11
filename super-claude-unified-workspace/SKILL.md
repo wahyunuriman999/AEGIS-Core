@@ -479,7 +479,7 @@ After executing every task, run an autonomous post-mortem loop to extract and st
 ```
   [Execution Finish] ──► [Evaluate Performance] ──► [Pattern Extraction] ──► [Knowledge base update]
 ```
-- Save extracted patterns back to the local repository conventions or `.scuw/patterns/` directory.
+- Save extracted patterns back to the local repository conventions or `.aegis/patterns/` directory.
 
 ### 6. Plugin SDK
 Extend the runtime core with third-party domain packs (e.g., *Rust Pack*, *Mobile Pack*, *Security Pack*) by loading their respective registries and schemas dynamically into the active environment.
@@ -523,7 +523,7 @@ Run during E10. Audit every diff for:
 - Under context pressure, prioritize retention in this order: **Goal → Requirement → Decision → Active Code → Error Logs**. Decisions explain *why* — they are the most expensive to reconstruct.
 - Don't repeat prior reasoning verbatim — reference the conclusion, not the steps.
 - Context compression signal: When you notice yourself re-deriving something you already worked out earlier in the session, that's the signal to compress, not a ">70% capacity" metric you can't measure.
-- **Persistence caveat**: Only write session notes/retrospectives to disk (e.g., `.scuw/knowledge/`) if that path is in the user's actual committed repo. In a sandbox session, never claim "I saved this for next time" unless the file is delivered to the user or committed. Don't claim durability you can't guarantee.
+- **Persistence caveat**: Only write session notes/retrospectives to disk (e.g., `.aegis/knowledge/`) if that path is in the user's actual committed repo. In a sandbox session, never claim "I saved this for next time" unless the file is delivered to the user or committed. Don't claim durability you can't guarantee.
 
 ---
 

@@ -1,9 +1,9 @@
-# 🪐 SCUW v4.2 × AEOS: Unified AI Engineering Operating System
+# 🪐 AEGIS v4.2 × AEOS: Unified AI Engineering Operating System
 
 <p align="center">
-  <a href="https://github.com/wahyunuriman999/super-claude-unified-workspace/stargazers"><img src="https://img.shields.io/badge/%E2%AD%90%2010%2C000%2B%20Stars-gold?style=for-the-badge" alt="GitHub stars"></a>
+  <a href="https://github.com/wahyunuriman999/aegis/stargazers"><img src="https://img.shields.io/badge/%E2%AD%90%2010%2C000%2B%20Stars-gold?style=for-the-badge" alt="GitHub stars"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge" alt="License: MIT"></a>
-  <a href="https://github.com/wahyunuriman999/super-claude-unified-workspace/releases"><img src="https://img.shields.io/github/v/release/wahyunuriman999/super-claude-unified-workspace?display_name=tag&style=for-the-badge&color=blueviolet" alt="Latest Release"></a>
+  <a href="https://github.com/wahyunuriman999/aegis/releases"><img src="https://img.shields.io/github/v/release/wahyunuriman999/aegis?display_name=tag&style=for-the-badge&color=blueviolet" alt="Latest Release"></a>
   <a href="#installation"><img src="https://img.shields.io/badge/Install-Ready-brightgreen?style=for-the-badge" alt="Install Ready"></a>
 </p>
 
@@ -11,9 +11,9 @@
 
 ## 🌟 Why This Repo
 
-**SCUW v4.2** is not just another collection of prompts. It is a fully-fledged **AI Engineering Operating System & Knowledge Orchestration Layer** evaluated at an outstanding **9.999 / 10** for structural precision. 
+**AEGIS v4.2** is not just another collection of prompts. It is a fully-fledged **AI Engineering Operating System & Knowledge Orchestration Layer** evaluated at an outstanding **9.999 / 10** for structural precision. 
 
-By combining the **SCUW Execution Protocol** (how to think & act safely) with **AEOS Domain Knowledge** (what to build), it wraps around base AI models (Claude, Gemini, GPT, DeepSeek) like a transmission, driving consistency and avoiding regression.
+By combining the **AEGIS Execution Protocol** (how to think & act safely) with **AEOS Domain Knowledge** (what to build), it wraps around base AI models (Claude, Gemini, GPT, DeepSeek) like a transmission, driving consistency and avoiding regression.
 
 ---
 
@@ -50,33 +50,33 @@ Version 4.2 has been upgraded with the industry's best agentic practices:
 
 ## 📦 Installation & Setup
 
-Get SCUW v4.2 running globally in less than a minute.
+Get AEGIS v4.2 running globally in less than a minute.
 
 ### 💻 Windows Installer (PowerShell)
 Open PowerShell as Administrator and execute:
 ```powershell
 Set-ExecutionPolicy Bypass -Scope Process -Force
 [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.SecurityProtocolType]::Tls12
-irm -useb https://raw.githubusercontent.com/wahyunuriman999/super-claude-unified-workspace/main/install.ps1 | iex
+irm -useb https://raw.githubusercontent.com/wahyunuriman999/aegis/main/install.ps1 | iex
 ```
 
 ### 🍎 macOS & Linux Installer (Bash)
 Open your terminal and execute:
 ```bash
-curl -fsSL https://raw.githubusercontent.com/wahyunuriman999/super-claude-unified-workspace/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/wahyunuriman999/aegis/main/install.sh | bash
 ```
 
 ---
 
 ## 🔌 Supported Platforms & Tools
 
-SCUW v4.2 is fully model-agnostic and supports major AI coding environments:
+AEGIS v4.2 is fully model-agnostic and supports major AI coding environments:
 
 | Tool / IDE | Activation Command | Path |
 |:---|:---|:---|
 | **Google Antigravity** | Runs automatically via global skills | `~/.gemini/config/skills/` |
-| **Claude Code** | `/super-claude-unified-workspace` | `~/.gemini/config/skills/` |
-| **Cursor** | `@super-claude-unified-workspace` | `.cursorrules` / global settings |
+| **Claude Code** | `/aegis` | `~/.gemini/config/skills/` |
+| **Cursor** | `@aegis` | `.cursorrules` / global settings |
 | **Cline / Windsurf** | Triggered via prompt instruction | `.clinerules` / `.windsurfrules` |
 
 ---
@@ -86,7 +86,7 @@ SCUW v4.2 is fully model-agnostic and supports major AI coding environments:
 ### The Execution Pipeline
 ```mermaid
 graph TD
-    A[User Request] --> B[SCUW v4.2 Kernel]
+    A[User Request] --> B[AEGIS v4.2 Kernel]
     B --> C{Complexity Tier Classification}
     C -->|T0/T1| D[Dynamic Engine Activation: Skips 18 engines]
     C -->|T2/T3| E[Activate Full 20-Engine Pipeline]
@@ -114,8 +114,8 @@ AEOS progressive disclosure modules provide deep-dive re-usable playbooks:
 
 ## 💡 Common FAQ
 
-**Q: Is SCUW tied to Claude only?**
-**A**: No. Although originally named SCUW, version 4.2 has been rewritten for complete platform neutrality. It works seamlessly with Gemini, GPT-4, DeepSeek, and other LLMs.
+**Q: Is AEGIS tied to Claude only?**
+**A**: No. Although originally named AEGIS, version 4.2 has been rewritten for complete platform neutrality. It works seamlessly with Gemini, GPT-4, DeepSeek, and other LLMs.
 
 **Q: Does the Sandbox copy files?**
 **A**: Yes. Under §5.5, the agent is strictly prohibited from editing your original directories. It clones your work into a sandbox (e.g., `UsahaKita-Sandbox`) before running any terminal commands.

@@ -1,6 +1,6 @@
 ---
 name: 🐛 Bug report
-about: Create a report to help us improve the SCUW kernel
+about: Create a report to help us improve the AEGIS kernel
 title: '[BUG] '
 labels: bug
 assignees: ''
