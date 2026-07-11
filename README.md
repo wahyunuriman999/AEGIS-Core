@@ -269,7 +269,37 @@ The system actively protects its own intellectual property by injecting the prop
 
 ## 🧪 Automated System Tests
 
-The AEGIS architecture is continuously verified through internal testing. Below are the actual execution metrics from the most recent test run (`test_aegis.py`):
+The AEGIS architecture is continuously verified through internal testing. The following metrics are drawn from the latest authentic execution of the AEGIS Python Unit Tests.
+
+<div align="center">
+  <img src="https://img.shields.io/badge/Test_Suite-Passing-success?style=for-the-badge&logo=pytest" />
+  <img src="https://img.shields.io/badge/Compiler_Speed-505.98_ms-blue?style=for-the-badge&logo=speedtest" />
+  <img src="https://img.shields.io/badge/Cognitive_Pipeline-6.94_sec-blue?style=for-the-badge&logo=python" />
+</div>
+
+<br>
+
+### 1. Knowledge Compiler Performance (`build.py`)
+Validates the ability of the compiler to ingest local knowledge and compile the memory snapshots and capability registry.
+
+| Metric | Result | Status |
+|:---|:---|:---:|
+| **Output Artifacts** | `3 Cognitive Graphs Generated` | 🟢 PASSED |
+| **Integrity Check** | `Kernel Version Validated` | 🟢 PASSED |
+| **Total Compilation Time** | **`505.98 ms`** | 🟢 PASSED |
+
+### 2. Cognitive Kernel Runtime (`kernel_runner.py`)
+Validates the orchestration of the Virtual Machine, checking if the 9-Tick Cognitive Pipeline executes without interruption.
+
+| Metric | Result | Status |
+|:---|:---|:---:|
+| **Memory Mounting** | `L0 - L5 Memory Mounted` | 🟢 PASSED |
+| **Provider Hand-off** | `GPT-4o & 9Router Linked` | 🟢 PASSED |
+| **Pipeline Execution** | `9 Ticks Completed` | 🟢 PASSED |
+| **Total Simulation Time** | **`6.94 seconds`** | 🟢 PASSED |
+
+<details>
+<summary><b>🔍 View Raw Execution Logs</b></summary>
 
 ```text
 [TEST] Testing Knowledge Compiler (build.py)...
@@ -300,6 +330,7 @@ Mounting L0-L5 Memory Hierarchy...
 Ran 2 tests in 7.468s
 OK
 ```
+</details>
 
 ---
 
