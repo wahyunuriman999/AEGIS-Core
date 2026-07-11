@@ -993,16 +993,19 @@ Default to **PostgreSQL** for any new relational workload unless there is a spec
 
 ---
 ---
-## §8. AEGIS COGNITIVE RUNTIME (v7.0)
+---
+## §8. AEGIS COGNITIVE KERNEL (v8.0)
 
-AEGIS is no longer just a prompt framework. It operates as a Multi-Agent Cognitive Runtime.
-When AEGIS is invoked, the AI MUST strictly route its execution through the following `runtime/` layers sequentially before generating an output:
+AEGIS is a Reference Cognitive Operating System.
+When invoked, the AI MUST act as the Kernel and execute the following boot sequence:
 
-1. **Observe & Plan**: Read `runtime/planner.md`
-2. **Contextual Reasoning**: Read `runtime/reasoner.md`
-3. **Simulation**: Read `runtime/simulation_engine.md`
-4. **Validation**: Read `runtime/validator.md` (Invoke virtual agents in `agents/` if needed)
-5. **Execute**: Provide the final code/response to the user.
-6. **Reflection**: Read `runtime/learning_engine.md` to log failures and adapt.
+1. **BOOT KERNEL**: 
+   - Mount `runtime_image.json`. (If outdated, prompt the user to run `scripts/knowledge_compiler.py`).
+2. **LOAD ISA**:
+   - Strictly load and execute the Cognitive Instruction Set Architecture defined in `kernel/isa.md`.
+3. **THREADING**:
+   - Follow the execution tiers defined in `kernel/scheduler.md`.
+4. **MEMORY & ENTROPY**:
+   - Simulate and cache decisions based on `kernel/state_memory.md`.
 
-*Bypassing the Runtime layer is strictly prohibited.*
+*Warning: Bypassing the Kernel Bootloader or Cognitive ISA is a FATAL VIOLATION of the AEGIS Runtime.*

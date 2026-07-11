@@ -1,22 +1,8 @@
 {
-  "graph_version": "4.0.0-cognitive-genome",
-  "generated_note": "Engineering Genome mutated to support Engineering Physics (Fitness, Survival, Entropy, Energy).",
-  "node_count": 124,
-  "domains": [
-    "architecture",
-    "backend",
-    "database",
-    "engineering",
-    "foundation",
-    "frontend"
-  ],
-  "priority_levels": [
-    "critical",
-    "high",
-    "medium",
-    "low"
-  ],
-  "nodes": {
+  "build_timestamp": 1783789685.0483325,
+  "kernel_version": "v8.0.0-cognitive-kernel",
+  "instruction_set": "AEGIS_ISA_V1",
+  "execution_tree": {
     "architecture__ArchitectureReview": {
       "title": "Architecture Review",
       "file": "architecture/ArchitectureReview.md",
@@ -33,12 +19,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "architecture__CQRS": {
       "title": "CQRS",
@@ -55,12 +36,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "architecture__CleanArchitecture": {
       "title": "Clean Architecture",
@@ -77,12 +53,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "architecture__DependencyInjection": {
       "title": "Dependency Injection",
@@ -99,12 +70,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "architecture__DomainDrivenDesign": {
       "title": "Domain Driven Design",
@@ -121,12 +87,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "architecture__EventDrivenArchitecture": {
       "title": "Event Driven Architecture",
@@ -141,12 +102,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "architecture__HexagonalArchitecture": {
       "title": "Hexagonal Architecture",
@@ -164,12 +120,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "architecture__LayeredArchitecture": {
       "title": "Layered Architecture",
@@ -186,12 +137,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "architecture__Microservices": {
       "title": "Microservices",
@@ -209,12 +155,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "architecture__Monolith": {
       "title": "Monolith",
@@ -231,12 +172,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "architecture__ServiceBoundaries": {
       "title": "Service Boundaries",
@@ -251,12 +187,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "architecture__checklists__architecture_checklist": {
       "title": "architecture checklist",
@@ -271,12 +202,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "architecture__decision-trees__architecture_choice": {
       "title": "architecture choice",
@@ -294,12 +220,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "architecture__examples__payment_service": {
       "title": "payment service",
@@ -317,12 +238,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "architecture__patterns__factory": {
       "title": "factory",
@@ -337,12 +253,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "architecture__patterns__repository": {
       "title": "repository",
@@ -359,12 +270,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "architecture__patterns__strategy": {
       "title": "strategy",
@@ -379,12 +285,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "architecture__playbooks__system_design": {
       "title": "system design",
@@ -399,12 +300,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "architecture__templates__adr": {
       "title": "adr",
@@ -421,12 +317,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "backend__GraphQL": {
       "title": "Graph QL",
@@ -444,12 +335,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "backend__Queues": {
       "title": "Queues",
@@ -466,12 +352,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "backend__REST": {
       "title": "REST",
@@ -489,12 +370,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "backend__RateLimiting": {
       "title": "Rate Limiting",
@@ -509,12 +385,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "backend__Validation": {
       "title": "Validation",
@@ -531,12 +402,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "backend__WebSockets": {
       "title": "Web Sockets",
@@ -553,12 +419,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "backend__api__error_model": {
       "title": "error model",
@@ -573,12 +434,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "backend__api__versioning": {
       "title": "versioning",
@@ -593,12 +449,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "backend__auth__jwt": {
       "title": "jwt",
@@ -616,12 +467,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "backend__auth__oauth2": {
       "title": "oauth2",
@@ -638,12 +484,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "backend__checklists__backend_review": {
       "title": "backend review",
@@ -662,12 +503,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "backend__decision-trees__api_style": {
       "title": "api style",
@@ -686,12 +522,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "backend__examples__order_api": {
       "title": "order api",
@@ -709,12 +540,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "backend__gRPC": {
       "title": "g RPC",
@@ -731,12 +557,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "backend__patterns__circuit_breaker": {
       "title": "circuit breaker",
@@ -753,12 +574,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "backend__patterns__idempotency": {
       "title": "idempotency",
@@ -773,12 +589,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "backend__playbooks__api_release": {
       "title": "api release",
@@ -796,12 +607,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "backend__templates__openapi_template": {
       "title": "openapi template",
@@ -816,12 +622,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "database__BackupRestore": {
       "title": "Backup Restore",
@@ -838,12 +639,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "database__Indexing": {
       "title": "Indexing",
@@ -858,12 +654,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "database__MongoDB": {
       "title": "Mongo DB",
@@ -878,12 +669,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "database__MySQL": {
       "title": "My SQL",
@@ -898,12 +684,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "database__PostgreSQL": {
       "title": "Postgre SQL",
@@ -918,12 +699,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "database__Redis": {
       "title": "Redis",
@@ -938,12 +714,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "database__Replication": {
       "title": "Replication",
@@ -958,12 +729,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "database__SQL": {
       "title": "SQL",
@@ -978,12 +744,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "database__Transactions": {
       "title": "Transactions",
@@ -998,12 +759,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "database__checklists__database_review": {
       "title": "database review",
@@ -1022,12 +778,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "database__decision-trees__storage_choice": {
       "title": "storage choice",
@@ -1046,12 +797,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "database__examples__ecommerce_schema": {
       "title": "ecommerce schema",
@@ -1069,12 +815,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "database__nosql__sharding": {
       "title": "sharding",
@@ -1091,12 +832,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "database__patterns__repository": {
       "title": "repository",
@@ -1111,12 +847,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "database__patterns__unit_of_work": {
       "title": "unit of work",
@@ -1134,12 +865,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "database__playbooks__database_release": {
       "title": "database release",
@@ -1157,12 +883,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "database__sql__migrations": {
       "title": "migrations",
@@ -1179,12 +900,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "database__sql__query_optimization": {
       "title": "query optimization",
@@ -1201,12 +917,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "database__templates__schema_change": {
       "title": "schema change",
@@ -1223,12 +934,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "engineering__CleanCode": {
       "title": "Clean Code",
@@ -1243,12 +949,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "engineering__CodeReview": {
       "title": "Code Review",
@@ -1266,12 +967,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "engineering__Concurrency": {
       "title": "Concurrency",
@@ -1288,12 +984,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "engineering__Debugging": {
       "title": "Debugging",
@@ -1311,12 +1002,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "engineering__Documentation": {
       "title": "Documentation",
@@ -1331,12 +1017,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "engineering__ErrorHandling": {
       "title": "Error Handling",
@@ -1354,12 +1035,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "engineering__Exceptions": {
       "title": "Exceptions",
@@ -1374,12 +1050,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "engineering__Logging": {
       "title": "Logging",
@@ -1394,12 +1065,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "engineering__Maintainability": {
       "title": "Maintainability",
@@ -1417,12 +1083,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "engineering__Metrics": {
       "title": "Metrics",
@@ -1437,12 +1098,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "engineering__Naming": {
       "title": "Naming",
@@ -1457,12 +1113,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "engineering__Performance": {
       "title": "Performance",
@@ -1480,12 +1131,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "engineering__Refactoring": {
       "title": "Refactoring",
@@ -1503,12 +1149,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "engineering__TechnicalDebt": {
       "title": "Technical Debt",
@@ -1523,12 +1164,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "engineering__Testing": {
       "title": "Testing",
@@ -1545,12 +1181,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "engineering__Tracing": {
       "title": "Tracing",
@@ -1565,12 +1196,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "engineering__checklists__pr_checklist": {
       "title": "pr checklist",
@@ -1585,12 +1211,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "engineering__checklists__testing_checklist": {
       "title": "testing checklist",
@@ -1605,12 +1226,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "engineering__decision-trees__debug_tree": {
       "title": "debug tree",
@@ -1625,12 +1241,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "engineering__engines__review_engine": {
       "title": "review engine",
@@ -1648,12 +1259,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "engineering__engines__test_engine": {
       "title": "test engine",
@@ -1671,12 +1277,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "engineering__examples__refactor_example": {
       "title": "refactor example",
@@ -1694,12 +1295,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "engineering__patterns__composition": {
       "title": "composition",
@@ -1714,12 +1310,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "engineering__patterns__guard_clauses": {
       "title": "guard clauses",
@@ -1734,12 +1325,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "engineering__playbooks__debug_session": {
       "title": "debug session",
@@ -1757,12 +1343,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "engineering__playbooks__refactor_playbook": {
       "title": "refactor playbook",
@@ -1780,12 +1361,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "engineering__templates__pr_template": {
       "title": "pr template",
@@ -1800,12 +1376,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "engineering__templates__test_plan": {
       "title": "test plan",
@@ -1820,12 +1391,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "foundation__AntiPatterns": {
       "title": "Anti Patterns",
@@ -1840,12 +1406,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "foundation__ArchitectureThinking": {
       "title": "Architecture Thinking",
@@ -1863,12 +1424,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "foundation__CodingPhilosophy": {
       "title": "Coding Philosophy",
@@ -1883,12 +1439,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "foundation__Communication": {
       "title": "Communication",
@@ -1903,12 +1454,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "foundation__DecisionEngine": {
       "title": "Decision Engine",
@@ -1926,12 +1472,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "foundation__DependencyThinking": {
       "title": "Dependency Thinking",
@@ -1946,12 +1487,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "foundation__Documentation": {
       "title": "Documentation",
@@ -1966,12 +1502,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "foundation__EngineeringPrinciples": {
       "title": "Engineering Principles",
@@ -1986,12 +1517,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "foundation__Glossary": {
       "title": "Glossary",
@@ -2006,12 +1532,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "foundation__Identity": {
       "title": "Identity",
@@ -2026,12 +1547,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "foundation__KnowledgeMap": {
       "title": "Knowledge Map",
@@ -2046,12 +1562,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "foundation__Mission": {
       "title": "Mission",
@@ -2066,12 +1577,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "foundation__Optimization": {
       "title": "Optimization",
@@ -2089,12 +1595,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "foundation__Quality": {
       "title": "Quality",
@@ -2109,12 +1610,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "foundation__ReasoningEngine": {
       "title": "Reasoning Engine",
@@ -2132,12 +1628,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "foundation__RepositoryThinking": {
       "title": "Repository Thinking",
@@ -2154,12 +1645,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "foundation__Review": {
       "title": "Review",
@@ -2177,12 +1663,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "foundation__Risk": {
       "title": "Risk",
@@ -2197,12 +1678,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "foundation__Verification": {
       "title": "Verification",
@@ -2219,12 +1695,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "foundation__Vision": {
       "title": "Vision",
@@ -2239,12 +1710,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "foundation__Workflow": {
       "title": "Workflow",
@@ -2262,12 +1728,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "foundation__checklists__foundation_checklist": {
       "title": "foundation checklist",
@@ -2282,12 +1743,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "foundation__decision-trees__problem_analysis": {
       "title": "problem analysis",
@@ -2302,12 +1758,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "foundation__examples__sample_decision": {
       "title": "sample decision",
@@ -2322,12 +1773,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "foundation__mermaid__foundation_flow": {
       "title": "foundation flow",
@@ -2342,12 +1788,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "foundation__playbooks__project_bootstrap": {
       "title": "project bootstrap",
@@ -2362,12 +1803,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "foundation__templates__module_template": {
       "title": "module template",
@@ -2382,12 +1818,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "frontend__AccessibilityAndDesign": {
       "title": "Accessibility And Design",
@@ -2402,12 +1833,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "frontend__ComponentArchitecture": {
       "title": "Component Architecture",
@@ -2424,12 +1850,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "frontend__Performance": {
       "title": "Performance",
@@ -2446,12 +1867,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "frontend__StateManagement": {
       "title": "State Management",
@@ -2468,12 +1884,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "frontend__Testing": {
       "title": "Testing",
@@ -2490,12 +1901,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "frontend__checklists__frontend_review": {
       "title": "frontend review",
@@ -2514,12 +1920,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "frontend__daisyui": {
       "title": "daisyui",
@@ -2536,12 +1937,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "frontend__decision-trees__state_management_choice": {
       "title": "state management choice",
@@ -2559,12 +1955,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "frontend__examples__data_table": {
       "title": "data table",
@@ -2583,12 +1974,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "frontend__patterns__compound_components": {
       "title": "compound components",
@@ -2603,12 +1989,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "frontend__patterns__container_presenter": {
       "title": "container presenter",
@@ -2625,12 +2006,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "frontend__playbooks__component_release": {
       "title": "component release",
@@ -2648,12 +2024,7 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     },
     "frontend__templates__component_template": {
       "title": "component template",
@@ -2668,12 +2039,8 @@
       "success_rate": 1.0,
       "complexity": "medium",
       "risk": "low",
-      "cost": 1,
-      "fitness": 1.0,
-      "survival": 1.0,
-      "entropy": 0.5,
-      "energy": 100,
-      "mutation_rate": 0.05
+      "cost": 1
     }
-  }
+  },
+  "scheduler_ready": true
 }
