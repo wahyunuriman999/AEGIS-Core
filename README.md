@@ -40,7 +40,7 @@ By combining the **AEGIS Execution Protocol** (how to think & act safely) with *
 
 ## 🤖 Multi-Agent Collaborations Integrated
 
-Version 4.2 has been upgraded with the industry's best agentic practices:
+Version 5.1.0 has been upgraded with the industry's best agentic practices:
 *   **SWE-Agent ACI Feedback Loop**: Introduces the *Observe & Reflect* cycle. If a compilation or test command fails, the agent must inspect the error log and update its strategy before modifying files again.
 *   **Aider Local Conventions**: The agent dynamically reads local `.cursorrules`, `.coderules`, or `CONVENTIONS.md` files at the start of the session to adapt to repository-specific rules.
 *   **Aider Atomic Commits**: Enforces step-by-step git commits for each sub-feature to ensure easy rollbacks.
@@ -115,7 +115,7 @@ AEOS progressive disclosure modules provide deep-dive re-usable playbooks:
 ## 💡 Common FAQ
 
 **Q: Is AEGIS tied to Claude only?**
-**A**: No. Although originally named AEGIS, version 4.2 has been rewritten for complete platform neutrality. It works seamlessly with Gemini, GPT-4, DeepSeek, and other LLMs.
+**A**: No. Although originally named AEGIS, Version 5.1.0 has been rewritten for complete platform neutrality. It works seamlessly with Gemini, GPT-4, DeepSeek, and other LLMs.
 
 **Q: Does the Sandbox copy files?**
 **A**: Yes. Under §5.5, the agent is strictly prohibited from editing your original directories. It clones your work into a sandbox (e.g., `UsahaKita-Sandbox`) before running any terminal commands.
