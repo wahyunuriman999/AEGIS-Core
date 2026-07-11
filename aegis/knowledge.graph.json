@@ -1,6 +1,6 @@
 {
-  "graph_version": "2.0.0",
-  "generated_note": "Full-coverage knowledge graph: every knowledge file in the workspace is a node. depends_on edges are hand-curated for the highest-traffic reasoning paths; nodes without edges are leaves or entry points discoverable via domain/category/priority filters instead of graph traversal.",
+  "graph_version": "3.0.0-cognitive",
+  "generated_note": "Engineering Genome integrated. Nodes now contain cognitive metadata (score, usage, success_rate, cost, etc) for multi-agent reasoning and decision making.",
   "node_count": 124,
   "domains": [
     "architecture",
@@ -27,7 +27,13 @@
       "depends_on": [
         "architecture__checklists__architecture_checklist",
         "foundation__Review"
-      ]
+      ],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "architecture__CQRS": {
       "title": "CQRS",
@@ -38,7 +44,13 @@
       "confidence": "verified",
       "depends_on": [
         "architecture__EventDrivenArchitecture"
-      ]
+      ],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "architecture__CleanArchitecture": {
       "title": "Clean Architecture",
@@ -49,7 +61,13 @@
       "confidence": "verified",
       "depends_on": [
         "foundation__ArchitectureThinking"
-      ]
+      ],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "architecture__DependencyInjection": {
       "title": "Dependency Injection",
@@ -60,7 +78,13 @@
       "confidence": "verified",
       "depends_on": [
         "foundation__DependencyThinking"
-      ]
+      ],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "architecture__DomainDrivenDesign": {
       "title": "Domain Driven Design",
@@ -71,7 +95,13 @@
       "confidence": "verified",
       "depends_on": [
         "architecture__ServiceBoundaries"
-      ]
+      ],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "architecture__EventDrivenArchitecture": {
       "title": "Event Driven Architecture",
@@ -80,7 +110,13 @@
       "category": "core",
       "priority": "high",
       "confidence": "verified",
-      "depends_on": []
+      "depends_on": [],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "architecture__HexagonalArchitecture": {
       "title": "Hexagonal Architecture",
@@ -92,7 +128,13 @@
       "depends_on": [
         "architecture__CleanArchitecture",
         "architecture__patterns__repository"
-      ]
+      ],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "architecture__LayeredArchitecture": {
       "title": "Layered Architecture",
@@ -103,7 +145,13 @@
       "confidence": "verified",
       "depends_on": [
         "architecture__CleanArchitecture"
-      ]
+      ],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "architecture__Microservices": {
       "title": "Microservices",
@@ -115,7 +163,13 @@
       "depends_on": [
         "architecture__ServiceBoundaries",
         "architecture__EventDrivenArchitecture"
-      ]
+      ],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "architecture__Monolith": {
       "title": "Monolith",
@@ -126,7 +180,13 @@
       "confidence": "verified",
       "depends_on": [
         "architecture__ServiceBoundaries"
-      ]
+      ],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "architecture__ServiceBoundaries": {
       "title": "Service Boundaries",
@@ -135,7 +195,13 @@
       "category": "core",
       "priority": "high",
       "confidence": "verified",
-      "depends_on": []
+      "depends_on": [],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "architecture__checklists__architecture_checklist": {
       "title": "architecture checklist",
@@ -144,7 +210,13 @@
       "category": "checklists",
       "priority": "high",
       "confidence": "verified",
-      "depends_on": []
+      "depends_on": [],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "architecture__decision-trees__architecture_choice": {
       "title": "architecture choice",
@@ -156,7 +228,13 @@
       "depends_on": [
         "foundation__ArchitectureThinking",
         "architecture__ServiceBoundaries"
-      ]
+      ],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "architecture__examples__payment_service": {
       "title": "payment service",
@@ -168,7 +246,13 @@
       "depends_on": [
         "architecture__HexagonalArchitecture",
         "backend__patterns__idempotency"
-      ]
+      ],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "architecture__patterns__factory": {
       "title": "factory",
@@ -177,7 +261,13 @@
       "category": "patterns",
       "priority": "high",
       "confidence": "verified",
-      "depends_on": []
+      "depends_on": [],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "architecture__patterns__repository": {
       "title": "repository",
@@ -188,7 +278,13 @@
       "confidence": "verified",
       "depends_on": [
         "database__patterns__repository"
-      ]
+      ],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "architecture__patterns__strategy": {
       "title": "strategy",
@@ -197,7 +293,13 @@
       "category": "patterns",
       "priority": "high",
       "confidence": "verified",
-      "depends_on": []
+      "depends_on": [],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "architecture__playbooks__system_design": {
       "title": "system design",
@@ -206,7 +308,13 @@
       "category": "playbooks",
       "priority": "high",
       "confidence": "verified",
-      "depends_on": []
+      "depends_on": [],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "architecture__templates__adr": {
       "title": "adr",
@@ -217,7 +325,13 @@
       "confidence": "verified",
       "depends_on": [
         "foundation__DecisionEngine"
-      ]
+      ],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "backend__GraphQL": {
       "title": "Graph QL",
@@ -229,7 +343,13 @@
       "depends_on": [
         "backend__api__error_model",
         "backend__Validation"
-      ]
+      ],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "backend__Queues": {
       "title": "Queues",
@@ -240,7 +360,13 @@
       "confidence": "verified",
       "depends_on": [
         "backend__patterns__idempotency"
-      ]
+      ],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "backend__REST": {
       "title": "REST",
@@ -252,7 +378,13 @@
       "depends_on": [
         "backend__Validation",
         "backend__api__error_model"
-      ]
+      ],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "backend__RateLimiting": {
       "title": "Rate Limiting",
@@ -261,7 +393,13 @@
       "category": "core",
       "priority": "high",
       "confidence": "verified",
-      "depends_on": []
+      "depends_on": [],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "backend__Validation": {
       "title": "Validation",
@@ -272,7 +410,13 @@
       "confidence": "verified",
       "depends_on": [
         "backend__api__error_model"
-      ]
+      ],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "backend__WebSockets": {
       "title": "Web Sockets",
@@ -283,7 +427,13 @@
       "confidence": "verified",
       "depends_on": [
         "backend__RateLimiting"
-      ]
+      ],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "backend__api__error_model": {
       "title": "error model",
@@ -292,7 +442,13 @@
       "category": "api",
       "priority": "high",
       "confidence": "verified",
-      "depends_on": []
+      "depends_on": [],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "backend__api__versioning": {
       "title": "versioning",
@@ -301,7 +457,13 @@
       "category": "api",
       "priority": "high",
       "confidence": "verified",
-      "depends_on": []
+      "depends_on": [],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "backend__auth__jwt": {
       "title": "jwt",
@@ -313,7 +475,13 @@
       "depends_on": [
         "backend__REST",
         "backend__RateLimiting"
-      ]
+      ],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "backend__auth__oauth2": {
       "title": "oauth2",
@@ -324,7 +492,13 @@
       "confidence": "verified",
       "depends_on": [
         "backend__auth__jwt"
-      ]
+      ],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "backend__checklists__backend_review": {
       "title": "backend review",
@@ -337,7 +511,13 @@
         "backend__REST",
         "backend__auth__jwt",
         "foundation__Review"
-      ]
+      ],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "backend__decision-trees__api_style": {
       "title": "api style",
@@ -350,7 +530,13 @@
         "backend__REST",
         "backend__GraphQL",
         "backend__gRPC"
-      ]
+      ],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "backend__examples__order_api": {
       "title": "order api",
@@ -362,7 +548,13 @@
       "depends_on": [
         "backend__REST",
         "backend__patterns__idempotency"
-      ]
+      ],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "backend__gRPC": {
       "title": "g RPC",
@@ -373,7 +565,13 @@
       "confidence": "verified",
       "depends_on": [
         "backend__api__versioning"
-      ]
+      ],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "backend__patterns__circuit_breaker": {
       "title": "circuit breaker",
@@ -384,7 +582,13 @@
       "confidence": "verified",
       "depends_on": [
         "backend__RateLimiting"
-      ]
+      ],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "backend__patterns__idempotency": {
       "title": "idempotency",
@@ -393,7 +597,13 @@
       "category": "patterns",
       "priority": "high",
       "confidence": "verified",
-      "depends_on": []
+      "depends_on": [],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "backend__playbooks__api_release": {
       "title": "api release",
@@ -405,7 +615,13 @@
       "depends_on": [
         "backend__api__versioning",
         "backend__checklists__backend_review"
-      ]
+      ],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "backend__templates__openapi_template": {
       "title": "openapi template",
@@ -414,7 +630,13 @@
       "category": "templates",
       "priority": "high",
       "confidence": "verified",
-      "depends_on": []
+      "depends_on": [],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "database__BackupRestore": {
       "title": "Backup Restore",
@@ -425,7 +647,13 @@
       "confidence": "verified",
       "depends_on": [
         "database__Replication"
-      ]
+      ],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "database__Indexing": {
       "title": "Indexing",
@@ -434,7 +662,13 @@
       "category": "core",
       "priority": "high",
       "confidence": "verified",
-      "depends_on": []
+      "depends_on": [],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "database__MongoDB": {
       "title": "Mongo DB",
@@ -443,7 +677,13 @@
       "category": "core",
       "priority": "high",
       "confidence": "verified",
-      "depends_on": []
+      "depends_on": [],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "database__MySQL": {
       "title": "My SQL",
@@ -452,7 +692,13 @@
       "category": "core",
       "priority": "high",
       "confidence": "verified",
-      "depends_on": []
+      "depends_on": [],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "database__PostgreSQL": {
       "title": "Postgre SQL",
@@ -461,7 +707,13 @@
       "category": "core",
       "priority": "high",
       "confidence": "verified",
-      "depends_on": []
+      "depends_on": [],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "database__Redis": {
       "title": "Redis",
@@ -470,7 +722,13 @@
       "category": "core",
       "priority": "high",
       "confidence": "verified",
-      "depends_on": []
+      "depends_on": [],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "database__Replication": {
       "title": "Replication",
@@ -479,7 +737,13 @@
       "category": "core",
       "priority": "high",
       "confidence": "verified",
-      "depends_on": []
+      "depends_on": [],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "database__SQL": {
       "title": "SQL",
@@ -488,7 +752,13 @@
       "category": "core",
       "priority": "high",
       "confidence": "verified",
-      "depends_on": []
+      "depends_on": [],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "database__Transactions": {
       "title": "Transactions",
@@ -497,7 +767,13 @@
       "category": "core",
       "priority": "high",
       "confidence": "verified",
-      "depends_on": []
+      "depends_on": [],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "database__checklists__database_review": {
       "title": "database review",
@@ -510,7 +786,13 @@
         "database__Transactions",
         "database__Indexing",
         "foundation__Review"
-      ]
+      ],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "database__decision-trees__storage_choice": {
       "title": "storage choice",
@@ -523,7 +805,13 @@
         "database__SQL",
         "database__MongoDB",
         "database__Redis"
-      ]
+      ],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "database__examples__ecommerce_schema": {
       "title": "ecommerce schema",
@@ -535,7 +823,13 @@
       "depends_on": [
         "database__SQL",
         "database__Indexing"
-      ]
+      ],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "database__nosql__sharding": {
       "title": "sharding",
@@ -546,7 +840,13 @@
       "confidence": "verified",
       "depends_on": [
         "database__Replication"
-      ]
+      ],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "database__patterns__repository": {
       "title": "repository",
@@ -555,7 +855,13 @@
       "category": "patterns",
       "priority": "high",
       "confidence": "verified",
-      "depends_on": []
+      "depends_on": [],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "database__patterns__unit_of_work": {
       "title": "unit of work",
@@ -567,7 +873,13 @@
       "depends_on": [
         "database__Transactions",
         "database__patterns__repository"
-      ]
+      ],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "database__playbooks__database_release": {
       "title": "database release",
@@ -579,7 +891,13 @@
       "depends_on": [
         "database__sql__migrations",
         "database__checklists__database_review"
-      ]
+      ],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "database__sql__migrations": {
       "title": "migrations",
@@ -590,7 +908,13 @@
       "confidence": "verified",
       "depends_on": [
         "database__Transactions"
-      ]
+      ],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "database__sql__query_optimization": {
       "title": "query optimization",
@@ -601,7 +925,13 @@
       "confidence": "verified",
       "depends_on": [
         "database__Indexing"
-      ]
+      ],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "database__templates__schema_change": {
       "title": "schema change",
@@ -612,7 +942,13 @@
       "confidence": "verified",
       "depends_on": [
         "database__sql__migrations"
-      ]
+      ],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "engineering__CleanCode": {
       "title": "Clean Code",
@@ -621,7 +957,13 @@
       "category": "core",
       "priority": "high",
       "confidence": "verified",
-      "depends_on": []
+      "depends_on": [],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "engineering__CodeReview": {
       "title": "Code Review",
@@ -633,7 +975,13 @@
       "depends_on": [
         "engineering__checklists__pr_checklist",
         "foundation__Review"
-      ]
+      ],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "engineering__Concurrency": {
       "title": "Concurrency",
@@ -644,7 +992,13 @@
       "confidence": "verified",
       "depends_on": [
         "engineering__Performance"
-      ]
+      ],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "engineering__Debugging": {
       "title": "Debugging",
@@ -656,7 +1010,13 @@
       "depends_on": [
         "engineering__decision-trees__debug_tree",
         "engineering__Logging"
-      ]
+      ],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "engineering__Documentation": {
       "title": "Documentation",
@@ -665,7 +1025,13 @@
       "category": "core",
       "priority": "high",
       "confidence": "verified",
-      "depends_on": []
+      "depends_on": [],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "engineering__ErrorHandling": {
       "title": "Error Handling",
@@ -677,7 +1043,13 @@
       "depends_on": [
         "engineering__Exceptions",
         "engineering__Logging"
-      ]
+      ],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "engineering__Exceptions": {
       "title": "Exceptions",
@@ -686,7 +1058,13 @@
       "category": "core",
       "priority": "high",
       "confidence": "verified",
-      "depends_on": []
+      "depends_on": [],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "engineering__Logging": {
       "title": "Logging",
@@ -695,7 +1073,13 @@
       "category": "core",
       "priority": "high",
       "confidence": "verified",
-      "depends_on": []
+      "depends_on": [],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "engineering__Maintainability": {
       "title": "Maintainability",
@@ -707,7 +1091,13 @@
       "depends_on": [
         "engineering__CleanCode",
         "engineering__TechnicalDebt"
-      ]
+      ],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "engineering__Metrics": {
       "title": "Metrics",
@@ -716,7 +1106,13 @@
       "category": "core",
       "priority": "high",
       "confidence": "verified",
-      "depends_on": []
+      "depends_on": [],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "engineering__Naming": {
       "title": "Naming",
@@ -725,7 +1121,13 @@
       "category": "core",
       "priority": "high",
       "confidence": "verified",
-      "depends_on": []
+      "depends_on": [],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "engineering__Performance": {
       "title": "Performance",
@@ -737,7 +1139,13 @@
       "depends_on": [
         "engineering__Metrics",
         "engineering__Tracing"
-      ]
+      ],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "engineering__Refactoring": {
       "title": "Refactoring",
@@ -749,7 +1157,13 @@
       "depends_on": [
         "engineering__CleanCode",
         "engineering__TechnicalDebt"
-      ]
+      ],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "engineering__TechnicalDebt": {
       "title": "Technical Debt",
@@ -758,7 +1172,13 @@
       "category": "core",
       "priority": "high",
       "confidence": "verified",
-      "depends_on": []
+      "depends_on": [],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "engineering__Testing": {
       "title": "Testing",
@@ -769,7 +1189,13 @@
       "confidence": "verified",
       "depends_on": [
         "engineering__checklists__testing_checklist"
-      ]
+      ],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "engineering__Tracing": {
       "title": "Tracing",
@@ -778,7 +1204,13 @@
       "category": "core",
       "priority": "high",
       "confidence": "verified",
-      "depends_on": []
+      "depends_on": [],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "engineering__checklists__pr_checklist": {
       "title": "pr checklist",
@@ -787,7 +1219,13 @@
       "category": "checklists",
       "priority": "high",
       "confidence": "verified",
-      "depends_on": []
+      "depends_on": [],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "engineering__checklists__testing_checklist": {
       "title": "testing checklist",
@@ -796,7 +1234,13 @@
       "category": "checklists",
       "priority": "high",
       "confidence": "verified",
-      "depends_on": []
+      "depends_on": [],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "engineering__decision-trees__debug_tree": {
       "title": "debug tree",
@@ -805,7 +1249,13 @@
       "category": "decision-trees",
       "priority": "high",
       "confidence": "verified",
-      "depends_on": []
+      "depends_on": [],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "engineering__engines__review_engine": {
       "title": "review engine",
@@ -817,7 +1267,13 @@
       "depends_on": [
         "engineering__CodeReview",
         "engineering__checklists__pr_checklist"
-      ]
+      ],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "engineering__engines__test_engine": {
       "title": "test engine",
@@ -829,7 +1285,13 @@
       "depends_on": [
         "engineering__Testing",
         "engineering__checklists__testing_checklist"
-      ]
+      ],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "engineering__examples__refactor_example": {
       "title": "refactor example",
@@ -841,7 +1303,13 @@
       "depends_on": [
         "engineering__Refactoring",
         "engineering__patterns__guard_clauses"
-      ]
+      ],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "engineering__patterns__composition": {
       "title": "composition",
@@ -850,7 +1318,13 @@
       "category": "patterns",
       "priority": "high",
       "confidence": "verified",
-      "depends_on": []
+      "depends_on": [],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "engineering__patterns__guard_clauses": {
       "title": "guard clauses",
@@ -859,7 +1333,13 @@
       "category": "patterns",
       "priority": "high",
       "confidence": "verified",
-      "depends_on": []
+      "depends_on": [],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "engineering__playbooks__debug_session": {
       "title": "debug session",
@@ -871,7 +1351,13 @@
       "depends_on": [
         "engineering__Debugging",
         "engineering__decision-trees__debug_tree"
-      ]
+      ],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "engineering__playbooks__refactor_playbook": {
       "title": "refactor playbook",
@@ -883,7 +1369,13 @@
       "depends_on": [
         "engineering__Refactoring",
         "engineering__patterns__composition"
-      ]
+      ],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "engineering__templates__pr_template": {
       "title": "pr template",
@@ -892,7 +1384,13 @@
       "category": "templates",
       "priority": "high",
       "confidence": "verified",
-      "depends_on": []
+      "depends_on": [],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "engineering__templates__test_plan": {
       "title": "test plan",
@@ -901,7 +1399,13 @@
       "category": "templates",
       "priority": "high",
       "confidence": "verified",
-      "depends_on": []
+      "depends_on": [],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "foundation__AntiPatterns": {
       "title": "Anti Patterns",
@@ -910,7 +1414,13 @@
       "category": "core",
       "priority": "critical",
       "confidence": "verified",
-      "depends_on": []
+      "depends_on": [],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "foundation__ArchitectureThinking": {
       "title": "Architecture Thinking",
@@ -922,7 +1432,13 @@
       "depends_on": [
         "foundation__DependencyThinking",
         "foundation__EngineeringPrinciples"
-      ]
+      ],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "foundation__CodingPhilosophy": {
       "title": "Coding Philosophy",
@@ -931,7 +1447,13 @@
       "category": "core",
       "priority": "critical",
       "confidence": "verified",
-      "depends_on": []
+      "depends_on": [],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "foundation__Communication": {
       "title": "Communication",
@@ -940,7 +1462,13 @@
       "category": "core",
       "priority": "critical",
       "confidence": "verified",
-      "depends_on": []
+      "depends_on": [],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "foundation__DecisionEngine": {
       "title": "Decision Engine",
@@ -952,7 +1480,13 @@
       "depends_on": [
         "foundation__EngineeringPrinciples",
         "foundation__Risk"
-      ]
+      ],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "foundation__DependencyThinking": {
       "title": "Dependency Thinking",
@@ -961,7 +1495,13 @@
       "category": "core",
       "priority": "critical",
       "confidence": "verified",
-      "depends_on": []
+      "depends_on": [],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "foundation__Documentation": {
       "title": "Documentation",
@@ -970,7 +1510,13 @@
       "category": "core",
       "priority": "critical",
       "confidence": "verified",
-      "depends_on": []
+      "depends_on": [],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "foundation__EngineeringPrinciples": {
       "title": "Engineering Principles",
@@ -979,7 +1525,13 @@
       "category": "core",
       "priority": "critical",
       "confidence": "verified",
-      "depends_on": []
+      "depends_on": [],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "foundation__Glossary": {
       "title": "Glossary",
@@ -988,7 +1540,13 @@
       "category": "core",
       "priority": "critical",
       "confidence": "verified",
-      "depends_on": []
+      "depends_on": [],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "foundation__Identity": {
       "title": "Identity",
@@ -997,7 +1555,13 @@
       "category": "core",
       "priority": "critical",
       "confidence": "verified",
-      "depends_on": []
+      "depends_on": [],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "foundation__KnowledgeMap": {
       "title": "Knowledge Map",
@@ -1006,7 +1570,13 @@
       "category": "core",
       "priority": "critical",
       "confidence": "verified",
-      "depends_on": []
+      "depends_on": [],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "foundation__Mission": {
       "title": "Mission",
@@ -1015,7 +1585,13 @@
       "category": "core",
       "priority": "critical",
       "confidence": "verified",
-      "depends_on": []
+      "depends_on": [],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "foundation__Optimization": {
       "title": "Optimization",
@@ -1027,7 +1603,13 @@
       "depends_on": [
         "foundation__Risk",
         "foundation__EngineeringPrinciples"
-      ]
+      ],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "foundation__Quality": {
       "title": "Quality",
@@ -1036,7 +1618,13 @@
       "category": "core",
       "priority": "critical",
       "confidence": "verified",
-      "depends_on": []
+      "depends_on": [],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "foundation__ReasoningEngine": {
       "title": "Reasoning Engine",
@@ -1048,7 +1636,13 @@
       "depends_on": [
         "foundation__DecisionEngine",
         "foundation__Verification"
-      ]
+      ],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "foundation__RepositoryThinking": {
       "title": "Repository Thinking",
@@ -1059,7 +1653,13 @@
       "confidence": "verified",
       "depends_on": [
         "foundation__ArchitectureThinking"
-      ]
+      ],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "foundation__Review": {
       "title": "Review",
@@ -1071,7 +1671,13 @@
       "depends_on": [
         "foundation__Quality",
         "foundation__Risk"
-      ]
+      ],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "foundation__Risk": {
       "title": "Risk",
@@ -1080,7 +1686,13 @@
       "category": "core",
       "priority": "critical",
       "confidence": "verified",
-      "depends_on": []
+      "depends_on": [],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "foundation__Verification": {
       "title": "Verification",
@@ -1091,7 +1703,13 @@
       "confidence": "verified",
       "depends_on": [
         "foundation__EngineeringPrinciples"
-      ]
+      ],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "foundation__Vision": {
       "title": "Vision",
@@ -1100,7 +1718,13 @@
       "category": "core",
       "priority": "critical",
       "confidence": "verified",
-      "depends_on": []
+      "depends_on": [],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "foundation__Workflow": {
       "title": "Workflow",
@@ -1112,7 +1736,13 @@
       "depends_on": [
         "foundation__DecisionEngine",
         "foundation__Verification"
-      ]
+      ],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "foundation__checklists__foundation_checklist": {
       "title": "foundation checklist",
@@ -1121,7 +1751,13 @@
       "category": "checklists",
       "priority": "critical",
       "confidence": "verified",
-      "depends_on": []
+      "depends_on": [],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "foundation__decision-trees__problem_analysis": {
       "title": "problem analysis",
@@ -1130,7 +1766,13 @@
       "category": "decision-trees",
       "priority": "critical",
       "confidence": "verified",
-      "depends_on": []
+      "depends_on": [],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "foundation__examples__sample_decision": {
       "title": "sample decision",
@@ -1139,7 +1781,13 @@
       "category": "examples",
       "priority": "critical",
       "confidence": "verified",
-      "depends_on": []
+      "depends_on": [],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "foundation__mermaid__foundation_flow": {
       "title": "foundation flow",
@@ -1148,7 +1796,13 @@
       "category": "mermaid",
       "priority": "critical",
       "confidence": "verified",
-      "depends_on": []
+      "depends_on": [],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "foundation__playbooks__project_bootstrap": {
       "title": "project bootstrap",
@@ -1157,7 +1811,13 @@
       "category": "playbooks",
       "priority": "critical",
       "confidence": "verified",
-      "depends_on": []
+      "depends_on": [],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "foundation__templates__module_template": {
       "title": "module template",
@@ -1166,7 +1826,13 @@
       "category": "templates",
       "priority": "critical",
       "confidence": "verified",
-      "depends_on": []
+      "depends_on": [],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "frontend__AccessibilityAndDesign": {
       "title": "Accessibility And Design",
@@ -1175,7 +1841,13 @@
       "category": "core",
       "priority": "medium",
       "confidence": "verified",
-      "depends_on": []
+      "depends_on": [],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "frontend__ComponentArchitecture": {
       "title": "Component Architecture",
@@ -1186,7 +1858,13 @@
       "confidence": "verified",
       "depends_on": [
         "frontend__patterns__container_presenter"
-      ]
+      ],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "frontend__Performance": {
       "title": "Performance",
@@ -1197,7 +1875,13 @@
       "confidence": "verified",
       "depends_on": [
         "engineering__Performance"
-      ]
+      ],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "frontend__StateManagement": {
       "title": "State Management",
@@ -1208,7 +1892,13 @@
       "confidence": "verified",
       "depends_on": [
         "frontend__decision-trees__state_management_choice"
-      ]
+      ],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "frontend__Testing": {
       "title": "Testing",
@@ -1219,7 +1909,13 @@
       "confidence": "verified",
       "depends_on": [
         "engineering__Testing"
-      ]
+      ],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "frontend__checklists__frontend_review": {
       "title": "frontend review",
@@ -1232,7 +1928,13 @@
         "frontend__AccessibilityAndDesign",
         "frontend__StateManagement",
         "foundation__Review"
-      ]
+      ],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "frontend__daisyui": {
       "title": "daisyui",
@@ -1243,7 +1945,13 @@
       "confidence": "verified",
       "depends_on": [
         "frontend__AccessibilityAndDesign"
-      ]
+      ],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "frontend__decision-trees__state_management_choice": {
       "title": "state management choice",
@@ -1255,7 +1963,13 @@
       "depends_on": [
         "frontend__StateManagement",
         "architecture__ServiceBoundaries"
-      ]
+      ],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "frontend__examples__data_table": {
       "title": "data table",
@@ -1268,7 +1982,13 @@
         "frontend__ComponentArchitecture",
         "frontend__Performance",
         "backend__examples__order_api"
-      ]
+      ],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "frontend__patterns__compound_components": {
       "title": "compound components",
@@ -1277,7 +1997,13 @@
       "category": "patterns",
       "priority": "medium",
       "confidence": "verified",
-      "depends_on": []
+      "depends_on": [],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "frontend__patterns__container_presenter": {
       "title": "container presenter",
@@ -1288,7 +2014,13 @@
       "confidence": "verified",
       "depends_on": [
         "frontend__ComponentArchitecture"
-      ]
+      ],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "frontend__playbooks__component_release": {
       "title": "component release",
@@ -1300,7 +2032,13 @@
       "depends_on": [
         "frontend__checklists__frontend_review",
         "backend__api__error_model"
-      ]
+      ],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     },
     "frontend__templates__component_template": {
       "title": "component template",
@@ -1309,7 +2047,13 @@
       "category": "templates",
       "priority": "medium",
       "confidence": "verified",
-      "depends_on": []
+      "depends_on": [],
+      "score": 100,
+      "usage_count": 0,
+      "success_rate": 1.0,
+      "complexity": "medium",
+      "risk": "low",
+      "cost": 1
     }
   }
 }

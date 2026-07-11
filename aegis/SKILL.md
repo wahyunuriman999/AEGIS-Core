@@ -1,7 +1,7 @@
 ---
 name: aegis
 description: >
-  AEOS Super OS — AI Engineering Operating System. 24-Engine Adaptive Software Engineering
+  AEGIS Autonomous Engineering General Intelligence System. 24-Engine Adaptive Software Engineering
   Runtime (AEGIS v5.1) fully integrated with AEOS Domain Knowledge (Foundation,
   Engineering, Architecture, Backend, Database, Frontend), backed by an expanded reference
   library in /foundation, /engineering, /architecture, /backend, /database, /frontend for
@@ -989,3 +989,28 @@ Default to **PostgreSQL** for any new relational workload unless there is a spec
 | DB technology choice | §E Storage Choice |
 | Frontend UI components | §F Frontend & UI |
 | T3 high-risk change | T3 tier + E2 + E8 + §C Architecture Review + §A Blast Radius |
+
+
+---
+## §8. AEGIS COGNITIVE RUNTIME (v6.0)
+
+AEGIS is no longer just a prompt framework. It operates as a Multi-Agent Cognitive Runtime.
+
+### 8.1 Virtual Engineering Team (Debate Engine)
+For critical architectural decisions, the Planner MUST simulate a debate by invoking specialized sub-agents located in `agents/`:
+- **Architecture Agent**: Evaluates scalability and structural integrity.
+- **Security Agent**: Evaluates attack vectors and vulnerabilities.
+- **Performance Agent**: Evaluates latency and resource bottlenecks.
+*Consensus must be reached before finalizing an output.*
+
+### 8.2 Engineering Genome
+The `knowledge.graph.json` contains DNA for each concept (`score`, `cost`, `risk`, `success_rate`). The Planner MUST prioritize nodes with high success rates and low risk.
+
+### 8.3 Failure Database & Decision DNA
+- **FAILURE_DB.json**: The Planner MUST lookup known past failures before proceeding.
+- **Decision DNA**: Every finalized architectural decision must document:
+  - `Why?`
+  - `Alternatives Considered?`
+  - `Tradeoffs?`
+  - `Risks?`
+  - `When NOT to use?`
