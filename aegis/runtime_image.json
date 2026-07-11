@@ -1,7 +1,7 @@
 {
-  "build_timestamp": 1783790294.38041,
-  "kernel_version": "v9.0.0-cognitive-runtime-platform",
-  "instruction_set": "AEGIS_ISA_V2",
+  "build_timestamp": 1783790821.4372282,
+  "kernel_version": "v10.0.0-cognitive-pipeline-compiler",
+  "instruction_set": "AEGIS_CIS_V1",
   "state_machine": {
     "current_state": "IDLE",
     "history": []
@@ -12,8 +12,11 @@
   },
   "memory_hierarchy": {
     "L0_working_memory": {},
-    "L1_task_memory": {},
-    "L2_knowledge_memory": {
+    "L1_context_memory": {},
+    "L2_experience_memory": {},
+    "L3_decision_memory": "pointer:AEGIS-Runtime/decision_ledger.json",
+    "L4_failure_memory": "pointer:AEGIS-Knowledge/FAILURE_DB.json",
+    "L5_evolution_memory": {
       "architecture__ArchitectureReview": {
         "title": "Architecture Review",
         "file": "architecture/ArchitectureReview.md",
@@ -2672,19 +2675,22 @@
         "energy": 100,
         "mutation_rate": 0.05
       }
-    },
-    "L3_experience_memory": "pointer:FAILURE_DB.json",
-    "L4_evolution_memory": "pointer:MUTATION_LOG"
+    }
   },
   "scheduler": {
     "priority_queue": []
   },
   "runtime_metrics": {
     "reasoning_depth": 0,
+    "planning_quality": 1.0,
+    "confidence_drift": 0.0,
     "knowledge_coverage": 0.0,
+    "validation_score": 0.0,
     "simulation_count": 0,
-    "confidence": 1.0,
-    "reflection_score": 0.0,
-    "learning_delta": 0.0
+    "failure_avoidance": 1.0,
+    "learning_gain": 0.0
+  },
+  "clock": {
+    "current_tick": 0
   }
 }
