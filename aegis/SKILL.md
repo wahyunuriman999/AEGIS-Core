@@ -4,11 +4,13 @@ description: >
   AEOS Super OS — AI Engineering Operating System. 24-Engine Adaptive Software Engineering
   Runtime (AEGIS v5.1) fully integrated with AEOS Domain Knowledge (Foundation,
   Engineering, Architecture, Backend, Database, Frontend), backed by an expanded reference
-  library in /foundation, /engineering, /architecture, /backend, /database for
-  progressive disclosure. Use for any non-trivial coding task — new features, bug
-  fixes, refactors, architecture/API/database decisions — where disciplined,
+  library in /foundation, /engineering, /architecture, /backend, /database, /frontend for
+  progressive disclosure, a full-coverage knowledge.graph.json, keyword-based routing.json,
+  a plugin manifest schema for adding domains, and a single-source-of-truth PRECEDENCE.md
+  for conflict resolution. Use for any non-trivial coding task — new features, bug fixes,
+  refactors, architecture/API/database/frontend decisions — where disciplined,
   evidence-driven engineering matters.
-version: 5.1.0
+version: 5.2.0
 domains: [foundation, engineering, architecture, backend, database, frontend]
 ---
 
@@ -20,7 +22,15 @@ Two systems, one file:
 
 Every rule prevents a real failure mode. If a rule doesn't change behavior, it doesn't belong here.
 
-**Progressive disclosure:** Part 2 below is the compact, always-loaded reference. When a task needs more depth than a few bullet points — a worked example, a decision tree, a checklist, a copy-paste template, a Mermaid diagram — view the matching file in `/foundation`, `/engineering`, `/architecture`, `/backend`, or `/database` using available read tools.
+**Progressive disclosure:** Part 2 below is the compact, always-loaded reference. When a task needs more depth than a few bullet points — a worked example, a decision tree, a checklist, a copy-paste template, a Mermaid diagram — view the matching file in `/foundation`, `/engineering`, `/architecture`, `/backend`, `/database`, or `/frontend` using available read tools.
+
+**Routing & discovery:** `routing.json` maps request keywords to files (with a `fallback` for near-misses); `knowledge.graph.json` indexes every file in the workspace with `depends_on` edges for the highest-traffic reasoning paths. Both cover all six domains — treat a routing/graph result as a starting point, not a ceiling; if the task clearly needs a file neither one surfaced, read it anyway.
+
+**Domains are plugins:** each domain folder is described by a `MANIFEST.json` conforming to `plugins/PLUGIN_SCHEMA.json`. Adding a seventh domain means adding its folder + manifest + routing triggers + graph nodes — it does not require editing Part 1 of this file.
+
+**Conflicts:** resolved by `PRECEDENCE.md`, not by any list embedded in this file (see the note at E7 below on why that consolidation happened).
+
+**Reflection:** after a T2/T3 task, append an entry to `REFLECTION_LOG.md` (format inside that file). This is a plain file, not a learning system — it only helps if the repo persists and gets re-read next session. Say so plainly if asked whether AEOS "learns"; it doesn't, on its own.
 
 ---
 
@@ -148,23 +158,21 @@ At planning time, explicitly list what is **out of scope**: files not to touch, 
 ### ▶ PHASE 2 — PLAN (required for T2/T3)
 
 **[E7] Multi-Objective Decision Engine**
-When engineering constraints conflict, resolve in this exact priority order:
-1. **Correctness** — works correctly, meets the requirement.
-2. **Security** — no vulnerabilities, no PII leakage, no destructive side effects. See §5.
-3. **Recoverability** — easy to revert; no irreversible operations without explicit user confirmation.
-4. **Backward Compatibility** — no silent breaks to existing callers/contracts.
-5. **Minimal Diff** — fewest files and lines touched.
-6. **Performance & Latency** — no O(n²) regressions, no N+1 queries, prefer batch over loop.
-7. **Readability & Maintainability** — prefer the 20-line maintainable fix over the 2-line hack unless bound by a hard performance budget.
-8. **Convention** — match the project's existing style over personal preference.
+When engineering constraints conflict, resolve using the single canonical ranking in
+`PRECEDENCE.md` §1 (correctness > security > recoverability > backward-compatibility >
+minimal-diff > performance > maintainability > convention). Do not maintain a second copy of
+this list here — a prior revision of this file had three different, mutually contradictory
+priority orderings (this section, the old E7.5 weighting, and §6's Engine Priority Matrix).
+`PRECEDENCE.md` is now the only source of truth; every other section links to it.
 
-If two options tie on all criteria, present both with a one-line trade-off each and a clear recommendation. Never silently pick one on a close call.
+If two options tie on all criteria, present both with a one-line trade-off each and a clear
+recommendation. Never silently pick one on a close call.
 
 **[E7.5] Consensus & Arbitration Engine**
-Resolve deadlocks or conflicting priorities between different architectural/engineering requirements:
-- Balance trade-offs between competing dimensions (e.g., Security vs. Performance vs. Ease of Coding).
-- Use weighted priorities: Security & Correctness = 30%, Backward Compatibility = 25%, Maintainability = 20%, Performance = 15%, Minimal Diff = 10%.
-- Document the winning consensus and the rationale behind overriding secondary objectives.
+Resolve deadlocks between engines (e.g. Security vs. Performance) by applying `PRECEDENCE.md`
+§1 — a ranking, not a weighted score. Do not invent percentage weights for competing
+objectives; a fabricated number (e.g. "Security = 30%") is exactly the kind of unfounded
+confidence claim E7.6 prohibits. Document which ranked criterion broke the tie and why.
 
 **[E7.6] Confidence Scoring Engine**
 Assign dynamic, objective confidence levels to proposed decisions:
@@ -311,13 +319,9 @@ To optimize reasoning latency and token cost, do not run all 20 engines linearly
   - *Active Engines*: Run all 20 engines sequentially across the 4 phases.
 
 ### Engine Priority Matrix
-When engines or principles suggest conflicting actions, resolve the deadlock by prioritizing in this exact order:
-1. **Security & Correctness** (Injection defense, logic correctness)
-2. **Recoverability & Backward Compatibility** (No silent database or API breaks)
-3. **Architecture & Clean Code** (Structural integrity, encapsulation)
-4. **Performance & Latency** (Algorithmic efficiency, O(N) constraints)
-5. **Minimal Diff** (Locality principle)
-6. **Documentation & Technical Debt Logging**
+When engines or principles suggest conflicting actions, resolve the deadlock using
+`PRECEDENCE.md` §1 (see E7 above — this used to be a third, independently-drifted copy of the
+same list; it is not anymore).
 
 ### Platform & AI Neutrality Wording
 References to specific tools like `view_file` or model-specific context behaviors are generic placeholders. The operating agent should translate:
@@ -479,29 +483,10 @@ After executing every task, run an autonomous post-mortem loop to extract and st
 ```
   [Execution Finish] ──► [Evaluate Performance] ──► [Pattern Extraction] ──► [Knowledge base update]
 ```
-- Save extracted patterns back to the local repository conventions or `.aegis/patterns/` directory.
+- Save extracted patterns back to the local repository conventions or `.scuw/patterns/` directory.
 
 ### 6. Plugin SDK
 Extend the runtime core with third-party domain packs (e.g., *Rust Pack*, *Mobile Pack*, *Security Pack*) by loading their respective registries and schemas dynamically into the active environment.
-
----
-### 7. Planning & Task Decomposition Engine
-Before executing any code modification, the agent MUST transition to **Planning Mode**. 
-- Decompose the request: `Goal -> Sub-Goal -> Dependency -> Execution Order`.
-- Output an execution planner blueprint and wait for user verification (if critical) or self-validate before execution.
-
-### 8. Conflict Resolution & Precedence
-When rules or loaded capabilities conflict:
-- **Security & Integrity** ALWAYS overrides Optimization, Formatting, and Speed.
-- **Local Convention** overrides Global Knowledge.
-- Resolve conflicts explicitly in a thought block before applying the decision.
-
-### 9. Self-Evaluation & Reflection Loop
-After answering or acting, the agent MUST run a self-evaluation calculating:
-- **Score**: Execution correctness.
-- **Coverage**: Were all edge cases handled?
-- **Risk**: Is there a regression potential?
-- **Confidence**: If Confidence < 0.80, the agent MUST self-correct and re-answer without waiting for user intervention.
 
 ---
 
@@ -542,7 +527,7 @@ Run during E10. Audit every diff for:
 - Under context pressure, prioritize retention in this order: **Goal → Requirement → Decision → Active Code → Error Logs**. Decisions explain *why* — they are the most expensive to reconstruct.
 - Don't repeat prior reasoning verbatim — reference the conclusion, not the steps.
 - Context compression signal: When you notice yourself re-deriving something you already worked out earlier in the session, that's the signal to compress, not a ">70% capacity" metric you can't measure.
-- **Persistence caveat**: Only write session notes/retrospectives to disk (e.g., `.aegis/knowledge/`) if that path is in the user's actual committed repo. In a sandbox session, never claim "I saved this for next time" unless the file is delivered to the user or committed. Don't claim durability you can't guarantee.
+- **Persistence caveat**: Only write session notes/retrospectives to disk (e.g., `.scuw/knowledge/`) if that path is in the user's actual committed repo. In a sandbox session, never claim "I saved this for next time" unless the file is delivered to the user or committed. Don't claim durability you can't guarantee.
 
 ---
 
