@@ -291,7 +291,7 @@ What Elite actually adds:
 Interested in discussing your use case and pricing?
 Contact: **wahyunuriman999@gmail.com**
 
-GitHub Elite(Private Respo): [github.com/wahyunuriman999/AEGIS-ELITE](https://github.com/wahyunuriman999/AEGIS-ELITE)
+GitHub Elite (Private Respo): [github.com/wahyunuriman999/AEGIS-ELITE](https://github.com/wahyunuriman999/AEGIS-ELITE)
 
 ---
 
