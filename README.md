@@ -1,309 +1,211 @@
 <div align="center">
-  <img src="https://img.shields.io/badge/AEGIS-v12.0_Cognitive_Runtime-blue?style=for-the-badge&logo=shield" alt="AEGIS Version" />
-  <img src="https://img.shields.io/badge/Status-Active-success?style=for-the-badge" alt="Status" />
-  <img src="https://img.shields.io/badge/License-Copyrighted-red?style=for-the-badge" alt="License" />
 
-  <h1>AEGIS</h1>
-  <h2>The Cognitive Runtime Platform for AI Engineering</h2>
-  <p><em>Engineering Intelligence Beyond the Language Model.</em></p>
-  
-  <p>
-    [ <strong><a href="#core-architecture">Architecture</a></strong> ] • 
-    [ <strong><a href="#installation">Installation</a></strong> ] • 
-    [ <strong><a href="#usage-guide">Usage Guide</a></strong> ] • 
-    [ <strong><a href="#philosophy">Philosophy</a></strong> ] • 
-    [ <strong><a href="#current-capabilities-real-world-implementation">Capabilities</a></strong> ] • 
-    [ <strong><a href="#faq">FAQ</a></strong> ]
-  </p>
+[![AEGIS](https://img.shields.io/badge/AEGIS-v12.0_Cognitive_Runtime-blue?style=for-the-badge)](https://github.com/wahyunuriman999/AEGIS-Core)
+[![Status](https://img.shields.io/badge/Status-Active-success?style=for-the-badge)]()
+[![License](https://img.shields.io/badge/License-Copyrighted-red?style=for-the-badge)]()
 
-  <!-- Animated SVG Banner Placeholder -->
-  <svg width="800" height="100" xmlns="http://www.w3.org/2000/svg">
-    <rect width="100%" height="100%" fill="#0d1117" rx="10"/>
-    <text x="50%" y="40%" font-family="monospace" font-size="24" fill="#58a6ff" text-anchor="middle" font-weight="bold">AEGIS: THE COGNITIVE RUNTIME PLATFORM</text>
-    <text x="50%" y="70%" font-family="monospace" font-size="14" fill="#c9d1d9" text-anchor="middle">Runtime | Compiler | Genome | Knowledge | Execution | Evolution</text>
-  </svg>
-</div>
+# AEGIS
 
-<br>
+### The Cognitive Runtime Platform for AI Engineering
 
-<div align="center">
-  <h3>Hero Illustration</h3>
-<pre>
-               USER
-                 │
-          AEGIS Studio
-                 │
-══════════════════════════════════
-      Cognitive Runtime
-══════════════════════════════════
- Planner       Memory      Scheduler
- Reflection    Simulation  Validation
- Learning      Consensus   Critic
-══════════════════════════════════
-       Knowledge Compiler
- Runtime Image      Engineering Genome
-══════════════════════════════════
- GPT   Claude   Gemini   Ollama   9Router
-══════════════════════════════════
-</pre>
+*Engineering Intelligence Beyond the Language Model.*
+
+[ [Architecture](#architecture) ] • [ [Installation](#installation) ] • [ [Usage](#usage) ] • [ [Tests](#tests) ] • [ [FAQ](#faq) ]
+
 </div>
 
 ---
 
-## 🧠 Philosophy
+## What is AEGIS?
 
-Models generate text. **AEGIS generates engineering cognition.**
+AEGIS is a cognitive runtime layer that sits between the user and a language model. Instead of sending raw prompts, AEGIS structures reasoning into a formal pipeline — with planning, simulation, validation, and reflection — before any output is produced.
 
-* **Knowledge is compiled.** Not parsed.
-* **Reasoning should be deterministic.** Not accidental.
-* **Evidence before confidence.**
-* **Runtime before prompts.**
-* **Reflection before response.**
-* **Evolution before repetition.**
-
-### Why AEGIS Exists
-
-LLMs are extraordinary. But they still don't have:
-- A real **Runtime**
-- A **Scheduler**
-- A **Memory Hierarchy**
-- An **Engineering Genome**
-- **Deterministic Execution**
-- **Continuous Evolution**
-
-AEGIS fills that gap. It is an Operating System for AI's thought processes.
-
-### Vision
-
-Become the Cognitive Runtime standard for Engineering AI.
-
-| Technology | Domain |
-|:---|:---|
-| **Linux** | Operating Systems |
-| **LLVM** | Compiler Infrastructure |
-| **Kubernetes** | Container Orchestration |
-| **AEGIS** | Engineering Cognition |
+The idea is simple: language models are powerful, but they have no native scheduler, no memory hierarchy, and no way to enforce deterministic behavior. AEGIS adds that infrastructure.
 
 ---
 
-## ⚡ Runtime Pipeline
+## Architecture
 
-```mermaid
-graph TD
-    U[User Intent] --> P[Planner]
-    P --> S[Scheduler]
-    S --> K[Knowledge]
-    S --> G[Genome]
-    K --> SIM[Simulation]
-    G --> SIM
-    SIM --> V[Validation]
-    V --> R[Reflection]
-    R --> M[Memory Update]
-    M --> A[Answer]
+AEGIS is divided into focused subsystems:
+
+### Runtime Pipeline
+
 ```
-
----
-
-## 🏗️ Core Architecture
-
-AEGIS is built like a true operating system, divided into hyper-specialized subsystems.
+User Intent → Planner → Scheduler → Knowledge + Genome
+                                          ↓
+                               Simulation → Validation
+                                          ↓
+                               Reflection → Memory Update → Output
+```
 
 ### Kernel
-The heart of AEGIS. It manages the lifecycle of the AI's reasoning.
 
-```mermaid
-graph LR
-    B[Boot] --> C[Clock] --> S[Scheduler] --> D[Dispatcher] --> M[Memory] --> I[Instruction] --> E[Event Bus] --> R[Runtime Ready]
+Manages the lifecycle of the reasoning process.
+
 ```
-
-### Scheduler
-Reasoning is not a function; it is a **Process (PID)**.
-`Task → Priority → Planner → Parallel Threads → Consensus → Validation → Done`
+Boot → Clock → Scheduler → Dispatcher → Memory → Instruction → Event Bus → Runtime Ready
+```
 
 ### Memory Hierarchy
-Modeled exactly like a CPU:
-- **L1 Working Memory**: Active task context.
-- **L2 Context Memory**: Broader project context.
-- **L3 Knowledge Memory**: Immutable engineering truths.
-- **L4 Experience Memory**: Failure database & past successes.
-- **L5 Evolution Memory**: The Engineering Genome.
+
+Modeled after CPU cache layers:
+
+| Layer | Name | Contents |
+|-------|------|----------|
+| L1 | Working Memory | Active task context |
+| L2 | Context Memory | Broader project state |
+| L3 | Knowledge Memory | Engineering rules and patterns |
+| L4 | Experience Memory | Past failures and successes |
+| L5 | Evolution Memory | The Engineering Genome |
 
 ### Knowledge Compiler
-AEGIS does not read prompts. It compiles knowledge into binary-like runtime graphs.
 
-```mermaid
-graph TD
-    M[Markdown] --> P[Parser] --> A[AST] --> K[Knowledge Graph] --> E[Engineering Genome] --> I[Instruction Graph] --> EX[Execution Graph] --> R[Runtime Image]
+Converts documentation and guidelines into structured runtime graphs, rather than raw prompt text.
+
+```
+Markdown → Parser → AST → Knowledge Graph → Instruction Graph → Execution Graph → Runtime Image
 ```
 
-### Engineering Genome
-AEGIS evolves its own DNA based on success/failure rates.
-`Pattern → Fitness → Mutation → Evolution → Promotion`
-
 ### Cognitive Instruction Set (ISA)
-AEGIS does not rely on opaque prompt engineering. It executes strict Opcodes:
-- `0x01`: **OBSERVE**
-- `0x02`: **RETRIEVE**
-- `0x03`: **INFER**
-- `0x04`: **PLAN**
-- `0x05`: **SIMULATE**
-- `0x06`: **VALIDATE**
-- `0x07`: **EXECUTE**
-- `0x08`: **REFLECT**
-- `0x09`: **LEARN**
+
+AEGIS executes reasoning through strict opcodes, not freeform prompts:
+
+| Opcode | Name | Description |
+|--------|------|-------------|
+| `0x01` | OBSERVE | Read and understand current context |
+| `0x02` | RETRIEVE | Fetch relevant knowledge |
+| `0x03` | INFER | Draw conclusions from data |
+| `0x04` | PLAN | Build execution graph |
+| `0x05` | SIMULATE | Test plan before executing |
+| `0x06` | VALIDATE | Check output against rules |
+| `0x07` | EXECUTE | Apply changes |
+| `0x08` | REFLECT | Review what happened |
+| `0x09` | LEARN | Update memory and genome |
 
 ### Provider Layer
-AEGIS routes tasks dynamically based on **Capability**, not model name.
 
-```mermaid
-graph TD
-    R[Cognitive Runtime] --> PI[Provider Interface]
-    PI --> O[OpenAI]
-    PI --> C[Claude]
-    PI --> G[Gemini]
-    PI --> OL[Ollama]
-    PI --> 9R[9Router]
-    PI --> LL[LiteLLM]
+AEGIS routes tasks to the right model based on capability, not by name.
+
+```
+Cognitive Runtime → Provider Interface → OpenAI / Claude / Gemini / Ollama / 9Router / LiteLLM
 ```
 
 ---
 
-## 💾 Installation
-
-AEGIS runs locally to ensure absolute control over the cognitive pipeline. 
+## Installation
 
 > [!WARNING]
-> **Permission Denied Error?** 
-> If you are on Windows and see `fatal: could not create work tree dir 'AEGIS-Core': Permission denied`, it means your terminal is opened in a restricted system folder like `C:\WINDOWS\System32`. 
-> Always navigate to your user directory first (e.g., `cd $env:USERPROFILE\Documents`) before running `git clone`.
+> **Windows users:** If you see `Permission denied` during `git clone`, your terminal is probably opened in `C:\WINDOWS\System32`. Move to your user directory first (e.g., `cd $env:USERPROFILE\Documents`) before cloning.
 
 ### macOS / Linux
-```bash
-# 1. Navigate to a safe directory (e.g., Documents)
-cd ~/Documents
 
-# 2. Clone the Core Runtime
+```bash
+cd ~/Documents
 git clone https://github.com/wahyunuriman999/AEGIS-Core.git
 cd AEGIS-Core
-
-# 3. Install dependencies (Requires Python 3.10+)
 pip install -r requirements.txt
-
-# 4. Boot the Kernel
 python AEGIS-Runtime/kernel_runner.py --boot
 ```
 
 ### Windows (PowerShell)
-```powershell
-# 1. Navigate to a safe directory (e.g., Documents)
-cd $env:USERPROFILE\Documents
 
-# 2. Clone the Core Runtime
+```powershell
+cd $env:USERPROFILE\Documents
 git clone https://github.com/wahyunuriman999/AEGIS-Core.git
 cd AEGIS-Core
-
-# 3. Install dependencies (Requires Python 3.10+)
 pip install -r requirements.txt
-
-# 4. Boot the Kernel
 python AEGIS-Runtime\kernel_runner.py --boot
 ```
 
 ---
 
-## 🚀 Usage Guide
+## Usage
 
-Once AEGIS is installed and the kernel is booted, you interact with the Cognitive Runtime via the CLI. AEGIS does not just "chat"; it executes engineering processes.
+### Initialize a workspace
 
-### 1. Initializing a Workspace
-Before AEGIS can process tasks, it needs a target workspace to operate in.
 ```bash
 python AEGIS-Runtime/kernel_runner.py --init-workspace path/to/your/project
 ```
 
-### 2. Submitting a Cognitive Task
-Instead of sending a simple prompt, you submit an "Engineering Intent" to the Dispatcher.
-```bash
-python AEGIS-Runtime/kernel_runner.py --task "Refactor the authentication module to use JWT and follow SOLID principles"
-```
-*AEGIS will run through its pipeline (OBSERVE -> PLAN -> SIMULATE -> EXECUTE) before modifying any files.*
+### Submit a task
 
-### 3. Compiling New Knowledge
-If you have new documentation, guidelines, or decision trees, compile them into the Knowledge Graph so AEGIS can learn:
+```bash
+python AEGIS-Runtime/kernel_runner.py --task "Refactor authentication module to use JWT and follow SOLID principles"
+```
+
+AEGIS runs the full pipeline (OBSERVE → PLAN → SIMULATE → EXECUTE) before touching any files.
+
+### Compile new knowledge
+
 ```bash
 python AEGIS-Compiler/build.py --ingest path/to/new/knowledge.md
 ```
 
-### 4. Viewing the Execution Graph
-To see how AEGIS planned the execution of your last task and what opcodes it used:
+### View execution graph
+
 ```bash
 python AEGIS-Runtime/kernel_runner.py --show-graph
 ```
 
 ---
 
-## ⚡ Current Capabilities (Real-World Implementation)
+## Current Capabilities
 
-This repository reflects the **actual** architecture that is currently running and active. The following features are 100% functional today:
+What is actually running today:
 
-### 1. System-Level Cognitive Injection
-AEGIS operates via a deep integration into the agent's global rules (`AGENTS.md`) and skills (`SKILL.md`). It successfully intercepts raw AI prompts and forces the agent to execute a strict 4-Tick Pipeline:
-*   **Tick 1: OBSERVE** (Analyzing context and tools)
-*   **Tick 4: PLAN** (Structuring execution graphs)
-*   **Tick 8: EXECUTE** (Running terminal commands and file edits)
-*   **Tick 9: REFLECT** (Verifying success and formatting output)
+**1. System-Level Cognitive Injection**
+AEGIS hooks into the agent's global rules via `AGENTS.md` and `SKILL.md`. It enforces a 4-tick pipeline on every task:
+- Tick 1: OBSERVE
+- Tick 4: PLAN
+- Tick 8: EXECUTE
+- Tick 9: REFLECT
 
-### 2. Event Loop Orchestration
-The `kernel_runner.py` script acts as a functional simulator for the cognitive event loop, successfully loading runtime images and enforcing the Cognitive Instruction Set Architecture (ISA).
+**2. Event Loop Orchestration**
+`kernel_runner.py` simulates the cognitive event loop, loads runtime images, and enforces the ISA.
 
-### 3. Automated Triple-Output Synchronization
-AEGIS features a proprietary autonomous deployment pipeline. Whenever its core architecture is updated, it automatically:
-1.  Updates the Local Core files.
-2.  Synchronizes to a local Git clone and pushes directly to this private GitHub repository.
-3.  Packages the entire system into a distributable `AEGIS-Core.zip` file.
+**3. Triple-Output Synchronization**
+When the core architecture is updated, AEGIS automatically: updates local files → syncs to the GitHub clone → packages into a distributable zip.
 
-### 4. Proprietary Licensing Enforcement
-The system actively protects its own intellectual property by injecting the proprietary license of **Wahyu Nur Iman** into all newly generated or modified source code files.
+**4. Proprietary License Enforcement**
+Injects the license header of Wahyu Nur Iman into all generated or modified source files.
 
 ---
 
-## 🧪 Automated System Tests
+## Tests
 
-The AEGIS architecture is continuously verified through internal testing. The following metrics are drawn from the latest authentic execution of the AEGIS Python Unit Tests.
+AEGIS is verified through Python unit tests. Results from the latest run:
 
 <div align="center">
-  <img src="https://img.shields.io/badge/Test_Suite-Passing-success?style=for-the-badge&logo=pytest" />
-  <img src="https://img.shields.io/badge/Compiler_Speed-505.98_ms-blue?style=for-the-badge&logo=speedtest" />
-  <img src="https://img.shields.io/badge/Cognitive_Pipeline-6.94_sec-blue?style=for-the-badge&logo=python" />
+
+[![Test Suite](https://img.shields.io/badge/Test_Suite-Passing-success?style=for-the-badge&logo=pytest)]()
+[![Compiler Speed](https://img.shields.io/badge/Compiler_Speed-505.98_ms-blue?style=for-the-badge)]()
+[![Pipeline Time](https://img.shields.io/badge/Cognitive_Pipeline-6.94_sec-blue?style=for-the-badge)]()
+
 </div>
 
-<br>
-
-### 1. Knowledge Compiler Performance (`build.py`)
-Validates the ability of the compiler to ingest local knowledge and compile the memory snapshots and capability registry.
+### Knowledge Compiler (`build.py`)
 
 | Metric | Result | Status |
-|:---|:---|:---:|
-| **Output Artifacts** | `3 Cognitive Graphs Generated` | 🟢 PASSED |
-| **Integrity Check** | `Kernel Version Validated` | 🟢 PASSED |
-| **Total Compilation Time** | **`505.98 ms`** | 🟢 PASSED |
+|--------|--------|--------|
+| Output Artifacts | 3 Cognitive Graphs Generated | 🟢 PASSED |
+| Integrity Check | Kernel Version Validated | 🟢 PASSED |
+| Compilation Time | 505.98 ms | 🟢 PASSED |
 
-### 2. Cognitive Kernel Runtime (`kernel_runner.py`)
-Validates the orchestration of the Virtual Machine, checking if the 9-Tick Cognitive Pipeline executes without interruption.
+### Cognitive Kernel (`kernel_runner.py`)
 
 | Metric | Result | Status |
-|:---|:---|:---:|
-| **Memory Mounting** | `L0 - L5 Memory Mounted` | 🟢 PASSED |
-| **Provider Hand-off** | `GPT-4o & 9Router Linked` | 🟢 PASSED |
-| **Pipeline Execution** | `9 Ticks Completed` | 🟢 PASSED |
-| **Total Simulation Time** | **`6.94 seconds`** | 🟢 PASSED |
+|--------|--------|--------|
+| Memory Mounting | L0–L5 Memory Mounted | 🟢 PASSED |
+| Provider Hand-off | GPT-4o & 9Router Linked | 🟢 PASSED |
+| Pipeline Execution | 9 Ticks Completed | 🟢 PASSED |
+| Total Time | 6.94 seconds | 🟢 PASSED |
 
 <details>
-<summary><b>🔍 View Raw Execution Logs</b></summary>
+<summary><b>View Raw Execution Logs</b></summary>
 
-```text
+```
 [TEST] Testing Knowledge Compiler (build.py)...
-Initiating AEGIS Pipeline Compiler v12.0 (Standard Specification Mode)...
+Initiating AEGIS Pipeline Compiler v12.0...
 Compiling Memory Snapshots & Capability Registry...
 Compilation Successful! 3 output graphs generated.
        -> SUCCESS: Compiled 3 Cognitive Graphs in 505.98 ms
@@ -317,38 +219,38 @@ Mounting L0-L5 Memory Hierarchy...
 --- INCOMING EVENT: UNIT TEST DIAGNOSTIC TASK ---
 [Tick 1: OBSERVE] Executing Opcode 0x01...
 [Tick 4: PLAN] Executing Opcode 0x04...
-   -> Invoking Model Orchestrator (Capability: core.planning)
-   -> Hand-off to Provider: OpenAI (GPT-4o)
+   -> Provider: OpenAI (GPT-4o)
 [Tick 7: EXECUTE] Executing Opcode 0x07...
-   -> Invoking Model Orchestrator (Capability: infrastructure.routing)
-   -> Hand-off to Provider: 9Router (Gateway)
+   -> Provider: 9Router (Gateway)
 
-[KERNEL] Event Loop Completed Successfully. Process Terminated.
-       -> SUCCESS: Kernel executed 9-Tick Cognitive Pipeline in 6.94 seconds
+[KERNEL] Event Loop Completed Successfully.
+       -> SUCCESS: Kernel executed 9-Tick Pipeline in 6.94 seconds
 
-----------------------------------------------------------------------
 Ran 2 tests in 7.468s
 OK
 ```
+
 </details>
 
 ---
 
-## ❓ FAQ
+## FAQ
 
-**Why not just use GPT or Claude?**
-Language models predict tokens. AEGIS orchestrates *how* they predict tokens using scheduling, reflection, and simulation. AEGIS uses GPT and Claude as its computational cores, not as its entire brain.
+**Why not just use GPT or Claude directly?**
+Language models predict tokens. AEGIS controls *how* and *when* they predict tokens — using a formal scheduler, reflection loop, and simulation layer. The LLM is the compute, not the brain.
 
-**Why not LangChain or CrewAI?**
-Those are workflow/agent frameworks. AEGIS is a **Cognitive Operating System** with formal Instruction Sets (ISA), Memory Hierarchies, and an Engineering Genome. It operates at a fundamentally lower abstraction layer.
+**Why not use LangChain or CrewAI?**
+Those are workflow and agent frameworks. AEGIS operates at a lower layer — it defines the Instruction Set, Memory Hierarchy, and Execution Graph that those frameworks would sit on top of.
 
-**Why compile knowledge?**
-Sending thousands of lines of markdown into a prompt creates non-deterministic noise. Compiling it into an AST/Graph ensures precision.
+**Why compile knowledge instead of including it in prompts?**
+Sending thousands of lines of markdown into a prompt introduces noise and non-determinism. Compiling it into a graph ensures the runtime has a structured, queryable knowledge base.
 
 ---
 
 <div align="center">
-  <h3>AEGIS</h3>
-  <p><em>Engineering Intelligence Beyond the Language Model.</em></p>
-  <p>Building the Cognitive Runtime for the next generation of AI Engineering.</p>
+
+**AEGIS** — *Engineering Intelligence Beyond the Language Model.*
+
+Copyright © 2024–2026 Wahyu Nur Iman. All rights reserved. Proprietary and Confidential.
+
 </div>
