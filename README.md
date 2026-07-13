@@ -10,6 +10,7 @@
 
 [![AEGIS](https://img.shields.io/badge/AEGIS-v12.0_Cognitive_Runtime-blue?style=for-the-badge)](https://github.com/wahyunuriman999/AEGIS-Core)
 [![Status](https://img.shields.io/badge/Status-Active-success?style=for-the-badge)]()
+[![Tier](https://img.shields.io/badge/Tier-Open_Source-brightgreen?style=for-the-badge)]()
 [![License](https://img.shields.io/badge/License-Copyrighted-red?style=for-the-badge)]()
 
 # AEGIS
@@ -18,7 +19,7 @@
 
 *Engineering Intelligence Beyond the Language Model.*
 
-[ [Architecture](#architecture) ] • [ [Installation](#installation) ] • [ [Usage](#usage) ] • [ [Tests](#tests) ] • [ [FAQ](#faq) ]
+[ [Architecture](#architecture) ] • [ [Installation](#installation) ] • [ [Usage](#usage) ] • [ [Tests](#tests) ] • [ [AEGIS Elite](#aegis-elite) ] • [ [FAQ](#faq) ]
 
 </div>
 
@@ -28,7 +29,7 @@
 
 AEGIS is a cognitive runtime layer that sits between the user and a language model. Instead of sending raw prompts, AEGIS structures reasoning into a formal pipeline — with planning, simulation, validation, and reflection — before any output is produced.
 
-The idea is simple: language models are powerful, but they have no native scheduler, no memory hierarchy, and no way to enforce deterministic behavior. AEGIS adds that infrastructure.
+Language models are powerful, but they have no native scheduler, no memory hierarchy, and no way to enforce deterministic behavior. AEGIS adds that infrastructure.
 
 ---
 
@@ -100,6 +101,28 @@ Cognitive Runtime → Provider Interface → OpenAI / Claude / Gemini / Ollama /
 
 ---
 
+## Current Capabilities
+
+What is actually running today:
+
+**1. System-Level Cognitive Injection**
+AEGIS hooks into the agent's global rules via `AGENTS.md` and `SKILL.md`. It enforces a 4-tick pipeline on every task:
+- Tick 1: OBSERVE
+- Tick 4: PLAN
+- Tick 8: EXECUTE
+- Tick 9: REFLECT
+
+**2. Event Loop Orchestration**
+`kernel_runner.py` simulates the cognitive event loop, loads runtime images, and enforces the ISA.
+
+**3. Triple-Output Synchronization**
+When the core architecture is updated, AEGIS automatically: updates local files → syncs to the GitHub clone → packages into a distributable zip.
+
+**4. Proprietary License Enforcement**
+Injects the license header of Wahyu Nur Iman into all generated or modified source files.
+
+---
+
 ## Installation
 
 > [!WARNING]
@@ -154,28 +177,6 @@ python AEGIS-Compiler/build.py --ingest path/to/new/knowledge.md
 ```bash
 python AEGIS-Runtime/kernel_runner.py --show-graph
 ```
-
----
-
-## Current Capabilities
-
-What is actually running today:
-
-**1. System-Level Cognitive Injection**
-AEGIS hooks into the agent's global rules via `AGENTS.md` and `SKILL.md`. It enforces a 4-tick pipeline on every task:
-- Tick 1: OBSERVE
-- Tick 4: PLAN
-- Tick 8: EXECUTE
-- Tick 9: REFLECT
-
-**2. Event Loop Orchestration**
-`kernel_runner.py` simulates the cognitive event loop, loads runtime images, and enforces the ISA.
-
-**3. Triple-Output Synchronization**
-When the core architecture is updated, AEGIS automatically: updates local files → syncs to the GitHub clone → packages into a distributable zip.
-
-**4. Proprietary License Enforcement**
-Injects the license header of Wahyu Nur Iman into all generated or modified source files.
 
 ---
 
@@ -242,43 +243,92 @@ OK
 
 ---
 
+## Core vs. Elite — Perbandingan Jujur
+
+AEGIS-Core adalah fondasi. AEGIS-Elite adalah sistem operasi lengkap yang dibangun di atas fondasi ini. Tabel di bawah menunjukkan perbedaan secara jujur, tanpa melebih-lebihkan:
+
+| Kemampuan | AEGIS-Core | AEGIS-Elite |
+|---|:---:|:---:|
+| **Cognitive Runtime (4-tick pipeline)** | ✅ | ✅ |
+| **Knowledge Compiler** | ✅ | ✅ |
+| **Memory Hierarchy (L1–L5)** | ✅ | ✅ |
+| **Provider routing** (GPT, Claude, Gemini, dll.) | ✅ | ✅ |
+| **Governance** | 1 lapisan (dasar) | **5 lapisan berlapis** |
+| **Audit trail per-commit** | ❌ | ✅ |
+| **Multi-agent consensus** | ❌ | ✅ 5 agen + veto power |
+| **Risk analysis sebelum perubahan** | ❌ | ✅ Blast-radius scoring |
+| **Cognitive Memory lintas sesi** | Basic (L4 Experience) | ✅ 4 subsystem (ADR ledger, topology diff, learning loop, trend analysis) |
+| **Governance makin ketat dari kegagalan** | ❌ | ✅ LearningLoop auto-tightening |
+| **Extension marketplace** | ❌ | ✅ 7 domain pack |
+| **Verifiable benchmark suite** | ❌ | ✅ 6 metrik vs industry baseline |
+| **Enterprise compliance** | ❌ | ✅ SOC2, GDPR, RBAC, audit trail |
+| **Git pre-commit hook** | ❌ | ✅ |
+| **Workflow multi-step dengan rollback** | ❌ | ✅ |
+| **Learning curve** | ⭐⭐⭐⭐⭐ (mudah) | ⭐⭐⭐ (lebih curam) |
+| **Cocok untuk** | Open source, integrasi, belajar | Tim besar, enterprise, regulasi ketat |
+
+### Mengapa Core lebih unggul untuk beberapa kasus
+
+Core sengaja lebih ringan dan itu adalah kekuatannya:
+
+- **Lebih mudah dipelajari** — tidak ada konsep tambahan yang perlu dipahami dulu
+- **Lebih mudah diintegrasikan** — bisa disisipkan ke Cursor, Copilot, Cline, Claude Code tanpa konfigurasi tambahan
+- **Maintenance lebih ringan** — codebase kecil, mudah di-fork dan dikontribusi
+- **Lebih cepat boot** — tanpa overhead governance dan consensus engine
+
+Core adalah pilihan tepat jika Anda tidak membutuhkan semua lapisan enterprise yang ada di Elite.
+
+---
+
 ## AEGIS Elite
 
-AEGIS Core is open and free to use. For teams that need more, there is a premium tier called **AEGIS Elite**.
+Untuk tim yang membutuhkan lebih dari fondasi, ada tier premium bernama **AEGIS Elite**.
 
-Elite extends the Core runtime with features built for production use — multi-agent coordination, enterprise governance, and active evolution of the system's own behavior based on real outcomes.
+Elite bukan sekadar Core dengan fitur tambahan. Elite adalah platform engineering lengkap yang menggunakan Core sebagai kernelnya — sama seperti Ubuntu menggunakan kernel Linux sebagai fondasinya.
 
-### What Elite adds over Core
+Yang Elite tambahkan secara nyata:
+- Governance 5 lapisan yang memblokir commit bermasalah sebelum masuk ke codebase
+- 5-agent AI council yang mendebat setiap perubahan, dengan hak veto untuk keamanan dan arsitektur
+- Sistem memory kognitif yang belajar dari kegagalan dan makin ketat seiring waktu
+- Risk assessment untuk menghitung dampak perubahan sebelum dieksekusi
+- Extension packs untuk domain spesifik (React, Flutter, Laravel, Rust, Security, ML, Python)
+- Enterprise compliance (SOC2, GDPR, RBAC, audit trail)
 
-| Feature | Core | Elite |
-|---------|------|-------|
-| Cognitive Runtime (4-tick pipeline) | ✅ | ✅ |
-| Knowledge Compiler | ✅ | ✅ |
-| Memory Hierarchy (L1–L5) | ✅ | ✅ |
-| Provider routing (GPT, Claude, Gemini, etc.) | ✅ | ✅ |
-| Multi-agent consensus voting | ❌ | ✅ |
-| Active Capability Graph (runtime self-mapping) | ❌ | ✅ |
-| Engineering Genome evolution (auto-mutation based on outcomes) | ❌ | ✅ |
-| Governance engine with audit trail | ❌ | ✅ |
-| Domain extension packs (security, data, infra, etc.) | ❌ | ✅ |
-| Enterprise deployment support | ❌ | ✅ |
+Tertarik atau ingin berdiskusi soal use case dan harga?
+Hubungi: **wahyunuriman999@gmail.com**
 
-### Interested?
+GitHub Elite: [github.com/wahyunuriman999/AEGIS-ELITE](https://github.com/wahyunuriman999/AEGIS-ELITE)
 
-Send an email to **wahyunuriman999@gmail.com** to discuss use case and pricing.
+---
+
+## Memilih Core atau Elite
+
+Ini bukan tentang mana yang "lebih baik" secara absolut. Ini tentang kebutuhan.
+
+**Pilih Core jika:**
+- Anda ingin memahami dan bereksperimen dengan AEGIS
+- Tim Anda kecil (1–5 developer)
+- Anda ingin mengintegrasikan AEGIS ke toolchain yang sudah ada
+- Open source dan komunitas adalah prioritas
+
+**Pilih Elite jika:**
+- Tim Anda > 5 developer dengan standar kode yang perlu dijaga terpusat
+- Anda butuh auditability dan governance untuk kepatuhan regulasi
+- Perlu workflow otomatis dari requirement hingga deployment
+- Setiap commit harus melewati validasi berlapis sebelum masuk ke production
 
 ---
 
 ## FAQ
 
-**Why not just use GPT or Claude directly?**
-Language models predict tokens. AEGIS controls *how* and *when* they predict tokens — using a formal scheduler, reflection loop, and simulation layer. The LLM is the compute, not the brain.
+**Mengapa tidak pakai GPT atau Claude langsung?**
+Language models memprediksi token. AEGIS mengontrol *bagaimana* dan *kapan* mereka memprediksi token — menggunakan formal scheduler, reflection loop, dan simulation layer. LLM adalah compute, bukan otak.
 
-**Why not use LangChain or CrewAI?**
-Those are workflow and agent frameworks. AEGIS operates at a lower layer — it defines the Instruction Set, Memory Hierarchy, and Execution Graph that those frameworks would sit on top of.
+**Mengapa tidak pakai LangChain atau CrewAI?**
+Itu adalah workflow dan agent frameworks. AEGIS beroperasi di lapisan lebih bawah — mendefinisikan Instruction Set, Memory Hierarchy, dan Execution Graph yang framework-framework itu duduki di atasnya.
 
-**Why compile knowledge instead of including it in prompts?**
-Sending thousands of lines of markdown into a prompt introduces noise and non-determinism. Compiling it into a graph ensures the runtime has a structured, queryable knowledge base.
+**Mengapa knowledge dikompilasi bukan di-prompt?**
+Mengirim ribuan baris markdown ke prompt menghasilkan noise dan non-determinisme. Mengkompilasinya ke dalam graph memastikan runtime punya knowledge base yang terstruktur dan bisa di-query.
 
 ---
 
