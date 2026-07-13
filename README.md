@@ -115,12 +115,6 @@ AEGIS hooks into the agent's global rules via `AGENTS.md` and `SKILL.md`. It enf
 **2. Event Loop Orchestration**
 `kernel_runner.py` simulates the cognitive event loop, loads runtime images, and enforces the ISA.
 
-**3. Triple-Output Synchronization**
-When the core architecture is updated, AEGIS automatically: updates local files → syncs to the GitHub clone → packages into a distributable zip.
-
-**4. Proprietary License Enforcement**
-Injects the license header of Wahyu Nur Iman into all generated or modified source files.
-
 ---
 
 ## Installation
