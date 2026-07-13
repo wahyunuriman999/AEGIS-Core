@@ -1,3 +1,11 @@
+<!--
+# ==========================================
+# AEGIS COGNITIVE RUNTIME PLATFORM
+# PROPRIETARY AND CONFIDENTIAL
+# Copyright (c) 2024-2026 Wahyu Nur Iman.
+# All rights reserved.
+# ==========================================
+-->
 <div align="center">
 
 [![AEGIS](https://img.shields.io/badge/AEGIS-v12.0_Cognitive_Runtime-blue?style=for-the-badge)](https://github.com/wahyunuriman999/AEGIS-Core)
@@ -231,6 +239,33 @@ OK
 ```
 
 </details>
+
+---
+
+## AEGIS Elite
+
+AEGIS Core is open and free to use. For teams that need more, there is a premium tier called **AEGIS Elite**.
+
+Elite extends the Core runtime with features built for production use — multi-agent coordination, enterprise governance, and active evolution of the system's own behavior based on real outcomes.
+
+### What Elite adds over Core
+
+| Feature | Core | Elite |
+|---------|------|-------|
+| Cognitive Runtime (4-tick pipeline) | ✅ | ✅ |
+| Knowledge Compiler | ✅ | ✅ |
+| Memory Hierarchy (L1–L5) | ✅ | ✅ |
+| Provider routing (GPT, Claude, Gemini, etc.) | ✅ | ✅ |
+| Multi-agent consensus voting | ❌ | ✅ |
+| Active Capability Graph (runtime self-mapping) | ❌ | ✅ |
+| Engineering Genome evolution (auto-mutation based on outcomes) | ❌ | ✅ |
+| Governance engine with audit trail | ❌ | ✅ |
+| Domain extension packs (security, data, infra, etc.) | ❌ | ✅ |
+| Enterprise deployment support | ❌ | ✅ |
+
+### Interested?
+
+Send an email to **wahyunuriman999@gmail.com** to discuss use case and pricing.
 
 ---
 
