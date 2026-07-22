@@ -1,3 +1,7 @@
-{
-  "ledger": []
-}
+[
+  {
+    "task": "Test Final Migration",
+    "decision": "APPROVED",
+    "entropy": 0.6
+  }
+]
