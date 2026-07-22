@@ -260,6 +260,8 @@ AEGIS-Core is the foundation. AEGIS-Elite is the full operating system built on 
 | **Extension marketplace** | ❌ | ✅ 7 domain packs |
 | **Verifiable benchmark suite** | ❌ | ✅ 6 metrics vs industry baseline |
 | **Enterprise compliance** | ❌ | ✅ SOC2, GDPR, RBAC, audit trail |
+| **Rapid Execution Partners** | ❌ | ✅ Native Appsmith, ILLA, Teable, Noodl |
+| **Execution-First Rule** | ❌ | ✅ Invariant 10 (Anti-Boilerplate) |
 | **Git pre-commit hook** | ❌ | ✅ |
 | **Multi-step workflow with rollback** | ❌ | ✅ |
 | **Learning curve** | ⭐⭐⭐⭐⭐ (easy) | ⭐⭐⭐ (steeper) |
@@ -291,6 +293,8 @@ What Elite actually adds:
 - Risk assessment that calculates the blast radius of changes before execution
 - Extension packs for specific domains (React, Flutter, Laravel, Rust, Security, ML, Python)
 - Enterprise compliance (SOC2, GDPR, RBAC, audit trail)
+- Native Rapid Execution Engines for Low-Code/No-Code platforms (Appsmith, ILLA Builder, Teable, Noodl)
+- Invariant 10: Execution-First architecture for instant functional outputs (Anti-Boilerplate)
 
 Interested in discussing your use case and pricing?
 Contact: **wahyunuriman999@gmail.com**
