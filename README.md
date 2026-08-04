@@ -43,22 +43,18 @@ Language models are powerful, but they have no native scheduler, no memory hiera
 
 ```mermaid
 %%{init: {
-  "theme": "base",
+  "theme": "dark",
   "themeVariables": {
     "primaryColor": "#0f172a",
-    "primaryTextColor": "#e2e8f0",
-    "primaryBorderColor": "#38bdf8",
-    "lineColor": "#64748b",
+    "primaryTextColor": "#f8fafc",
+    "primaryBorderColor": "#0ea5e9",
+    "lineColor": "#0ea5e9",
     "secondaryColor": "#1e293b",
     "tertiaryColor": "#0f172a",
     "background": "#020617",
     "mainBkg": "#0f172a",
-    "nodeBorder": "#38bdf8",
-    "clusterBkg": "#1e293b",
-    "titleColor": "#38bdf8",
-    "edgeLabelBackground": "#1e293b",
-    "attributeBackgroundColorEven": "#1e293b",
-    "attributeBackgroundColorOdd": "#0f172a"
+    "nodeBorder": "#0ea5e9",
+    "clusterBkg": "#1e293b"
   }
 }}%%
 mindmap
