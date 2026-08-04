@@ -42,43 +42,62 @@ Language models are powerful, but they have no native scheduler, no memory hiera
 ### Product Map: AEGIS Core Ecosystem
 
 ```mermaid
+%%{init: {
+  "theme": "base",
+  "themeVariables": {
+    "primaryColor": "#0f172a",
+    "primaryTextColor": "#e2e8f0",
+    "primaryBorderColor": "#38bdf8",
+    "lineColor": "#64748b",
+    "secondaryColor": "#1e293b",
+    "tertiaryColor": "#0f172a",
+    "background": "#020617",
+    "mainBkg": "#0f172a",
+    "nodeBorder": "#38bdf8",
+    "clusterBkg": "#1e293b",
+    "titleColor": "#38bdf8",
+    "edgeLabelBackground": "#1e293b",
+    "attributeBackgroundColorEven": "#1e293b",
+    "attributeBackgroundColorOdd": "#0f172a"
+  }
+}}%%
 mindmap
-  root((AEGIS Core))
-    Cognitive Pipeline (ISA v2.0)
-      0x01 OBSERVE
-      0x02 RETRIEVE
-      0x03 COMPARE
-      0x04 EVALUATE
-      0x05 PLAN
-      0x06 PREDICT
-      0x07 SIMULATE
-      0x08 DEBATE
-      0x09 VALIDATE
-      0x0A REFLECT
-      0x0B LEARN
-    Memory Hierarchy
+  root((🧠 AEGIS Core))
+    🔵 Cognitive Pipeline ISA v2.0
+      ⚡ 0x01 OBSERVE
+      🔍 0x02 RETRIEVE
+      ⚖️ 0x03 COMPARE
+      📊 0x04 EVALUATE
+      🗺️ 0x05 PLAN
+      🔮 0x06 PREDICT
+      🧪 0x07 SIMULATE
+      🗣️ 0x08 DEBATE
+      ✅ 0x09 VALIDATE
+      🪞 0x0A REFLECT
+      🧬 0x0B LEARN
+    🟢 Memory Hierarchy
       L0 Working Memory
       L1 Context State
       L2 Experience Cache
       L3 Knowledge Base
       L4 Failure Database
       L5 Engineering Genome
-    Provider Ecosystem
-      OpenAI (OPENAI_API_KEY)
-      Anthropic (ANTHROPIC_API_KEY)
-      Google Gemini (GOOGLE_API_KEY)
-      Local Ollama (OLLAMA_HOST)
-      Simulation (no key needed)
-    Knowledge Compiler
+    🟠 Provider Ecosystem
+      OpenAI GPT-4o
+      Anthropic Claude
+      Google Gemini
+      Local Ollama
+      Simulation Fallback
+    🟣 Knowledge Compiler
       Markdown Parser
       AST Generation
       Instruction Graph
       Runtime Image
-    Target Environments
+    🩵 Target Environments
       CLI Automation
-      IDE Integrations (Cursor, Copilot)
+      Cursor and Copilot
       CI/CD Pipelines
-    Open Source Readiness
+    🟡 Open Source Ready
       requirements.txt
       CONTRIBUTING.md
       GitHub Actions CI
