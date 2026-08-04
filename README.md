@@ -8,9 +8,10 @@
 -->
 <div align="center">
 
-[![AEGIS](https://img.shields.io/badge/AEGIS-v12.0_Cognitive_Runtime-blue?style=for-the-badge)](https://github.com/wahyunuriman999/AEGIS-Core)
+[![AEGIS](https://img.shields.io/badge/AEGIS-v12.1.0_Cognitive_Runtime-blue?style=for-the-badge)](https://github.com/wahyunuriman999/AEGIS-Core)
 [![Status](https://img.shields.io/badge/Status-Active-success?style=for-the-badge)]()
 [![Tier](https://img.shields.io/badge/Tier-Open_Source-brightgreen?style=for-the-badge)]()
+[![CI](https://img.shields.io/github/actions/workflow/status/wahyunuriman999/AEGIS-Core/test.yml?style=for-the-badge&label=CI&logo=github)](https://github.com/wahyunuriman999/AEGIS-Core/actions)
 [![License](https://img.shields.io/badge/License-Copyrighted-red?style=for-the-badge)]()
 
 # AEGIS
@@ -19,7 +20,7 @@
 
 *Engineering Intelligence Beyond the Language Model.*
 
-[ [Architecture](#architecture) ] • [ [Installation](#installation) ] • [ [Usage](#usage) ] • [ [Tests](#tests) ] • [ [AEGIS Elite](#aegis-elite) ] • [ [FAQ](#faq) ]
+[ [Architecture](#architecture) ] • [ [Installation](#installation) ] • [ [Usage](#usage) ] • [ [Tests](#tests) ] • [ [Contributing](#contributing) ] • [ [AEGIS Elite](#aegis-elite) ] • [ [FAQ](#faq) ]
 
 </div>
 
@@ -43,23 +44,31 @@ Language models are powerful, but they have no native scheduler, no memory hiera
 ```mermaid
 mindmap
   root((AEGIS Core))
-    Cognitive Pipeline
-      Tick 1 OBSERVE (Context)
-      Tick 4 PLAN (Strategy)
-      Tick 8 EXECUTE (Action)
-      Tick 9 REFLECT (Feedback)
+    Cognitive Pipeline (ISA v2.0)
+      0x01 OBSERVE
+      0x02 RETRIEVE
+      0x03 COMPARE
+      0x04 EVALUATE
+      0x05 PLAN
+      0x06 PREDICT
+      0x07 SIMULATE
+      0x08 DEBATE
+      0x09 VALIDATE
+      0x0A REFLECT
+      0x0B LEARN
     Memory Hierarchy
-      L1 Working Memory
-      L2 Context State
+      L0 Working Memory
+      L1 Context State
+      L2 Experience Cache
       L3 Knowledge Base
-      L4 Experience Logs
+      L4 Failure Database
       L5 Engineering Genome
     Provider Ecosystem
-      OpenAI (GPT-4o)
-      Anthropic (Claude 3.5)
-      Google (Gemini Pro)
-      Local (Ollama / Llama3)
-      Aggregators (9Router / LiteLLM)
+      OpenAI (OPENAI_API_KEY)
+      Anthropic (ANTHROPIC_API_KEY)
+      Google Gemini (GOOGLE_API_KEY)
+      Local Ollama (OLLAMA_HOST)
+      Simulation (no key needed)
     Knowledge Compiler
       Markdown Parser
       AST Generation
@@ -69,6 +78,12 @@ mindmap
       CLI Automation
       IDE Integrations (Cursor, Copilot)
       CI/CD Pipelines
+    Open Source Readiness
+      requirements.txt
+      CONTRIBUTING.md
+      GitHub Actions CI
+      CHANGELOG + SECURITY
+      docs/ARCHITECTURE.md
 ```
 
 ---
@@ -115,28 +130,57 @@ Converts documentation and guidelines into structured runtime graphs, rather tha
 Markdown → Parser → AST → Knowledge Graph → Instruction Graph → Execution Graph → Runtime Image
 ```
 
-### Cognitive Instruction Set (ISA)
+### Cognitive Instruction Set (ISA v2.0)
 
 AEGIS executes reasoning through strict opcodes, not freeform prompts:
 
 | Opcode | Name | Description |
 |--------|------|-------------|
-| `0x01` | OBSERVE | Read and understand current context |
-| `0x02` | RETRIEVE | Fetch relevant knowledge |
-| `0x03` | INFER | Draw conclusions from data |
-| `0x04` | PLAN | Build execution graph |
-| `0x05` | SIMULATE | Test plan before executing |
-| `0x06` | VALIDATE | Check output against rules |
-| `0x07` | EXECUTE | Apply changes |
-| `0x08` | REFLECT | Review what happened |
-| `0x09` | LEARN | Update memory and genome |
+| `0x01` | OBSERVE | Parse user intent, load context to L1 |
+| `0x02` | RETRIEVE | Fetch relevant nodes from L3 Knowledge Graph |
+| `0x03` | COMPARE | Cross-reference against PRECEDENCE.md rules |
+| `0x04` | EVALUATE | Calculate Engineering Entropy score |
+| `0x05` | PLAN | Invoke Provider to construct execution DAG |
+| `0x06` | PREDICT | Simulate T+60 entropy forecast |
+| `0x07` | SIMULATE | Stress-test plan against failure vectors |
+| `0x08` | DEBATE | Invoke virtual sub-agents for consensus |
+| `0x09` | VALIDATE | Verify consensus and entropy thresholds |
+| `0x0A` | REFLECT | Compare output against FAILURE_DB patterns |
+| `0x0B` | LEARN | Mutate genome, cache state to L4 memory |
 
 ### Provider Layer
 
-AEGIS routes tasks to the right model based on capability, not by name.
+AEGIS auto-detects available LLM providers from environment variables and routes each capability to the best available model. No API key? It runs in **Simulation mode** — no external calls required.
 
 ```
-Cognitive Runtime → Provider Interface → OpenAI / Claude / Gemini / Ollama / 9Router / LiteLLM
+Cognitive Runtime → Provider Manager → Auto-detect env vars
+                                              │
+                    ┌─────────────────────────┼──────────────────────────┐
+                    ▼                         ▼                          ▼
+            OPENAI_API_KEY           ANTHROPIC_API_KEY           GOOGLE_API_KEY
+             (GPT-4o)                 (Claude Sonnet)            (Gemini Flash)
+                    │                                                     │
+                    └──────────────── OLLAMA_HOST ────────────────────────┘
+                                      (local Llama3)
+                                            │
+                                    [No keys? Simulation]
+```
+
+```bash
+# Use OpenAI
+export OPENAI_API_KEY="sk-..."
+
+# Use Anthropic Claude
+export ANTHROPIC_API_KEY="sk-ant-..."
+
+# Use Google Gemini
+export GOOGLE_API_KEY="AIza..."
+
+# Use local Ollama
+export OLLAMA_HOST="http://localhost:11434"
+
+# No keys — runs in simulation mode automatically
+python aegis/AEGIS-Runtime/kernel_runner.py --task "my task"
 ```
 
 ---
@@ -145,15 +189,20 @@ Cognitive Runtime → Provider Interface → OpenAI / Claude / Gemini / Ollama /
 
 What is actually running today:
 
-**1. System-Level Cognitive Injection**
-AEGIS hooks into the agent's global rules via `AGENTS.md` and `SKILL.md`. It enforces a 4-tick pipeline on every task:
-- Tick 1: OBSERVE
-- Tick 4: PLAN
-- Tick 8: EXECUTE
-- Tick 9: REFLECT
+**1. Full 11-Tick ISA Pipeline**
+AEGIS executes a complete Cognitive Instruction Set (OBSERVE → RETRIEVE → COMPARE → EVALUATE → PLAN → PREDICT → SIMULATE → DEBATE → VALIDATE → REFLECT → LEARN) on every task.
 
-**2. Event Loop Orchestration**
-`kernel_runner.py` simulates the cognitive event loop, loads runtime images, and enforces the ISA.
+**2. Real LLM Provider Routing**
+Auto-detects OpenAI, Anthropic, Gemini, and Ollama from environment variables. Falls back to Simulation mode if no keys are set — pipeline always runs.
+
+**3. Knowledge Compiler**
+Compiles Markdown documentation into a structured runtime graph (`knowledge.graph.json`) that the kernel queries during RETRIEVE and COMPARE ticks.
+
+**4. Cognitive Memory (L0–L5)**
+Persists execution traces (`runtime_trace.json`), decision records (`decision_ledger.json`), and failure patterns (`FAILURE_DB.json`) across sessions.
+
+**5. GitHub Actions CI**
+Automated test suite runs on Python 3.10, 3.11, and 3.12 on every push and pull request.
 
 ---
 
@@ -169,7 +218,7 @@ cd ~/Documents
 git clone https://github.com/wahyunuriman999/AEGIS-Core.git
 cd AEGIS-Core
 pip install -r requirements.txt
-python AEGIS-Runtime/kernel_runner.py --boot
+python aegis/AEGIS-Runtime/kernel_runner.py --task "Hello AEGIS"
 ```
 
 ### Windows (PowerShell)
@@ -179,8 +228,11 @@ cd $env:USERPROFILE\Documents
 git clone https://github.com/wahyunuriman999/AEGIS-Core.git
 cd AEGIS-Core
 pip install -r requirements.txt
-python AEGIS-Runtime\kernel_runner.py --boot
+python aegis\AEGIS-Runtime\kernel_runner.py --task "Hello AEGIS"
 ```
+
+> [!NOTE]
+> No API key needed for first run — AEGIS auto-detects providers and falls back to Simulation mode.
 
 ---
 
@@ -195,36 +247,43 @@ python AEGIS-Runtime/kernel_runner.py --init-workspace path/to/your/project
 ### Submit a task
 
 ```bash
-python AEGIS-Runtime/kernel_runner.py --task "Refactor authentication module to use JWT and follow SOLID principles"
+python aegis/AEGIS-Runtime/kernel_runner.py --task "Refactor authentication module to use JWT and follow SOLID principles"
 ```
 
-AEGIS runs the full pipeline (OBSERVE → PLAN → SIMULATE → EXECUTE) before touching any files.
+AEGIS runs the full **11-tick ISA pipeline** (OBSERVE → PLAN → SIMULATE → DEBATE → VALIDATE → LEARN) before producing output.
 
 ### Compile new knowledge
 
 ```bash
-python AEGIS-Compiler/build.py --ingest path/to/new/knowledge.md
+python aegis/AEGIS-Compiler/build.py
 ```
 
 ### View execution graph
 
 ```bash
-python AEGIS-Runtime/kernel_runner.py --show-graph
+python aegis/AEGIS-Runtime/kernel_runner.py --show-graph
 ```
 
 ---
 
 ## Tests
 
-AEGIS is verified through Python unit tests. Results from the latest run:
+AEGIS is verified through Python unit tests and runs automated CI on GitHub Actions.
 
 <div align="center">
 
-[![Test Suite](https://img.shields.io/badge/Test_Suite-Passing-success?style=for-the-badge&logo=pytest)]()
+[![CI](https://img.shields.io/github/actions/workflow/status/wahyunuriman999/AEGIS-Core/test.yml?style=for-the-badge&label=CI%20%E2%80%94%20Python%203.10%20%7C%203.11%20%7C%203.12&logo=github)](https://github.com/wahyunuriman999/AEGIS-Core/actions)
 [![Compiler Speed](https://img.shields.io/badge/Compiler_Speed-505.98_ms-blue?style=for-the-badge)]()
-[![Pipeline Time](https://img.shields.io/badge/Cognitive_Pipeline-6.94_sec-blue?style=for-the-badge)]()
+[![Pipeline Time](https://img.shields.io/badge/Cognitive_Pipeline-2.4_sec-blue?style=for-the-badge)]()
 
 </div>
+
+### Run tests locally
+
+```bash
+pip install pytest
+python -m pytest AEGIS-Tests/ -v
+```
 
 ### Knowledge Compiler (`build.py`)
 
@@ -239,38 +298,35 @@ AEGIS is verified through Python unit tests. Results from the latest run:
 | Metric | Result | Status |
 |--------|--------|--------|
 | Memory Mounting | L0–L5 Memory Mounted | 🟢 PASSED |
-| Provider Hand-off | GPT-4o & 9Router Linked | 🟢 PASSED |
-| Pipeline Execution | 9 Ticks Completed | 🟢 PASSED |
-| Total Time | 6.94 seconds | 🟢 PASSED |
+| Provider Detection | Simulation mode (no keys) | 🟢 PASSED |
+| Pipeline Execution | 11-Tick ISA Completed | 🟢 PASSED |
+| Total Time | ~2.4 seconds | 🟢 PASSED |
 
 <details>
-<summary><b>View Raw Execution Logs</b></summary>
+<summary><b>View Raw Execution Log</b></summary>
 
 ```
-[TEST] Testing Knowledge Compiler (build.py)...
-Initiating AEGIS Pipeline Compiler v12.0...
-Compiling Memory Snapshots & Capability Registry...
-Compilation Successful! 3 output graphs generated.
-       -> SUCCESS: Compiled 3 Cognitive Graphs in 505.98 ms
-
-[TEST] Testing Cognitive Kernel (kernel_runner.py)...
+[SYS] No API keys found — running in Simulation mode.
+[SYS] Loaded 5 capabilities from Registry.
 [BIOS: OK] Booting AEGIS Virtual Machine v12.0...
-Kernel Version: v12.0.0-executable-kernel
-Loaded 6 Providers via ABI.
 Mounting L0-L5 Memory Hierarchy...
+[SYS] Validated ABI Conformity.
+Kernel Version: v12.0.0-real-executable-kernel
 
---- INCOMING EVENT: UNIT TEST DIAGNOSTIC TASK ---
-[Tick 1: OBSERVE] Executing Opcode 0x01...
-[Tick 4: PLAN] Executing Opcode 0x04...
-   -> Provider: OpenAI (GPT-4o)
-[Tick 7: EXECUTE] Executing Opcode 0x07...
-   -> Provider: 9Router (Gateway)
+--- [AEGIS] KERNEL DISPATCH: SPRINT 2 VERIFICATION ---
+[Tick 0x01: OBSERVE]  -> Parsed user intent. Loaded to L1.
+[Tick 0x02: RETRIEVE] -> Fetched compiled nodes from L3.
+[Tick 0x03: COMPARE]  -> Cross-referenced against PRECEDENCE.md.
+[Tick 0x04: EVALUATE] -> Entropy: Low, Latency: Optimal.
+[Tick 0x05: PLAN]     -> [SIM] Synthesized capability 'core.planning'
+[Tick 0x06: PREDICT]  -> T+60 Entropy Forecast: 22.60
+[Tick 0x07: SIMULATE] -> Stress-tested against failure vectors.
+[Tick 0x08: DEBATE]   -> Consensus reached across 3 agents.
+[Tick 0x09: VALIDATE] -> Entropy acceptable.
+[Tick 0x0A: REFLECT]  -> Compared against FAILURE_DB.
+[Tick 0x0B: LEARN]    -> Genome mutated. Cached to L4.
 
-[KERNEL] Event Loop Completed Successfully.
-       -> SUCCESS: Kernel executed 9-Tick Pipeline in 6.94 seconds
-
-Ran 2 tests in 7.468s
-OK
+[KERNEL] 11-Tick Pipeline Completed. Terminated in 2.41s.
 ```
 
 </details>
@@ -336,6 +392,54 @@ Interested in discussing your use case and pricing?
 Contact: **wahyunuriman999@gmail.com**
 
 GitHub Elite (Private Respo): [github.com/wahyunuriman999/AEGIS-ELITE](https://github.com/wahyunuriman999/AEGIS-ELITE)
+
+---
+
+## Contributing
+
+We welcome contributions! Please read [`CONTRIBUTING.md`](./CONTRIBUTING.md) for:
+- Development setup
+- Code style (PEP 8, license headers)
+- Commit message format (Conventional Commits)
+- Architecture boundaries (what belongs in Core vs Elite)
+- How to report bugs and request features
+
+```bash
+# Fork → clone → branch → commit → pull request
+git checkout -b feat/your-feature
+git commit -m "feat(kernel): add your feature"
+```
+
+For security vulnerabilities, see [`SECURITY.md`](./SECURITY.md).
+
+---
+
+## Repository Structure
+
+```
+AEGIS-Core/
+├── .github/
+│   ├── workflows/test.yml      # GitHub Actions CI (Python 3.10/3.11/3.12)
+│   └── ISSUE_TEMPLATE/
+├── AEGIS-Tests/
+│   ├── test_aegis.py           # Unit test suite
+│   └── benchmark_runner.py     # Performance benchmark
+├── aegis/
+│   ├── AEGIS-Kernel/           # Boot, clock, scheduler, memory, ISA
+│   ├── AEGIS-Runtime/          # kernel_runner.py — 11-tick pipeline
+│   ├── AEGIS-Compiler/         # build.py — Markdown → Runtime Graph
+│   ├── AEGIS-Provider/         # provider_manager.py — LLM routing
+│   ├── AEGIS-Specification/    # ABI spec, capability registry
+│   └── AEGIS-Knowledge/        # Knowledge packs
+├── docs/
+│   └── ARCHITECTURE.md         # Full architecture reference
+├── requirements.txt            # pip install -r requirements.txt
+├── CONTRIBUTING.md             # Contribution guide
+├── CHANGELOG.md                # Version history
+├── SECURITY.md                 # Vulnerability reporting
+├── install.sh / install.ps1    # Cross-platform installers
+└── README.md                   # This file
+```
 
 ---
 
