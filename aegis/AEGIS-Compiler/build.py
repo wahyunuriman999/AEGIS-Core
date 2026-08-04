@@ -14,7 +14,8 @@ def build_cognitive_pipeline():
     print("Initiating AEGIS Pipeline Compiler v12.0 (Real Execution Mode)...")
     time.sleep(0.5)
     
-    aegis_root = r'C:\Users\ROG G532 LV\.gemini\antigravity\scratch\aegis-core-update\aegis'
+    # Auto-detect aegis_root relative to this file's location
+    aegis_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     
     # 1. RUN REAL KNOWLEDGE COMPILER (No Mock)
     compiler = KnowledgeCompiler(aegis_root)

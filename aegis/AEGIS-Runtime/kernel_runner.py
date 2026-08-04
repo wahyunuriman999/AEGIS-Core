@@ -54,7 +54,8 @@ class AegisVirtualMachine:
         self.dispatcher.dispatch(task_name)
         
 if __name__ == "__main__":
-    aegis_root = r'C:\Users\ROG G532 LV\.gemini\antigravity\scratch\aegis-core-update\aegis'
+    # Auto-detect aegis_root relative to this file's location
+    aegis_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     vm = AegisVirtualMachine(aegis_root)
     vm.boot()
     
