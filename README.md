@@ -403,10 +403,8 @@ What Elite actually adds:
 - Native Rapid Execution Engines for Low-Code/No-Code platforms (Appsmith, ILLA Builder, Teable, Noodl)
 - Invariant 10: Execution-First architecture for instant functional outputs (Anti-Boilerplate)
 
-Interested in discussing your use case and pricing?
-Contact: **wahyunuriman999@gmail.com**
 
-GitHub Elite (Private Respo): [github.com/wahyunuriman999/AEGIS-ELITE](https://github.com/wahyunuriman999/AEGIS-ELITE)
+GitHub Elite: [github.com/wahyunuriman999/AEGIS-ELITE](https://github.com/wahyunuriman999/AEGIS-ELITE)
 
 ---
 
