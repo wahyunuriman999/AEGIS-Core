@@ -404,7 +404,7 @@ What Elite actually adds:
 - Invariant 10: Execution-First architecture for instant functional outputs (Anti-Boilerplate)
 
 
-GitHub Elite: [github.com/wahyunuriman999/AEGIS-ELITE](https://github.com/wahyunuriman999/AEGIS-ELITE)
+Aegis Elite: [github.com/wahyunuriman999/AEGIS-ELITE](https://github.com/wahyunuriman999/AEGIS-ELITE)
 
 ---
 
